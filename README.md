@@ -8,8 +8,31 @@ Based on 17,000+ customer survey responses (8 months) | 10,100% projected ROI | 
 
 ## 📁 Repository Contents
 
-### 1. **MyBambu_Interactive_Presentation_v2.html** 🆕
-**Comprehensive interactive presentation** with 8 months of survey data analysis
+### 1. **MyBambu_Marketing_Presentation.html** 🆕 LATEST
+**24-slide interactive presentation deck** based on MARKETING_PRESENTATION_DECK.md with official brand colors
+
+**Features:**
+- ✅ Official MyBambu Brand Guidelines 2025 colors (#27FB6B Synthetic Spearmint, #00052E Blue Black)
+- 📊 24 slides covering complete marketing strategy
+- 🎯 All 5 campaign pillars with detailed breakdowns
+- 💰 Complete ROI analysis ($219K budget, 10,100% ROI)
+- 🎨 Professional slide design with animations & transitions
+- ⌨️ Keyboard navigation (Arrow keys, Home, End)
+- 📱 Mobile responsive design
+- 📈 Progress bar and slide counter
+
+**How to Use:**
+1. Download and open in any browser (Chrome, Safari, Firefox)
+2. Navigate with arrow keys or buttons
+3. Present directly from browser (F11 for fullscreen)
+4. Perfect for executive presentations
+
+**Best For:** Board presentations, investor pitches, executive reviews
+
+---
+
+### 2. **MyBambu_Interactive_Presentation_v2.html**
+**Comprehensive interactive dashboard** with 8 months of survey data analysis
 
 **Features:**
 - 🚨 Crisis Analysis Dashboard (declining CSAT, Rewards Queue crisis)
@@ -30,16 +53,16 @@ Based on 17,000+ customer survey responses (8 months) | 10,100% projected ROI | 
 
 ---
 
-### 1b. **MyBambu_Interactive_Presentation.html** (Original)
+### 3. **MyBambu_Interactive_Presentation.html** (Original)
 **Original 4-pillar interactive presentation**
 
-**Note:** Version 2 (above) supersedes this with comprehensive 8-month survey data. Kept for reference.
+**Note:** Version 2 supersedes this with comprehensive 8-month survey data. Kept for reference.
 
 **Best For:** Historical comparison
 
 ---
 
-### 2. **COMPREHENSIVE_SURVEY_ANALYSIS.md** 🆕
+### 4. **COMPREHENSIVE_SURVEY_ANALYSIS.md**
 **30,000+ word deep-dive analysis** of 8 months of survey data
 
 **What's Inside:**
@@ -56,7 +79,7 @@ Based on 17,000+ customer survey responses (8 months) | 10,100% projected ROI | 
 
 ---
 
-### 3. **ADVISORY_DEEP_DIVE.md**
+### 5. **ADVISORY_DEEP_DIVE.md**
 **30,000+ word consulting-level strategic document** (Original 4-pillar strategy)
 
 **What's Inside:**
@@ -132,7 +155,7 @@ What to do this week, next week, and why speed matters
 
 ---
 
-### 4. **MARKETING_PRESENTATION_DECK.md**
+### 6. **MARKETING_PRESENTATION_DECK.md**
 **53-slide presentation framework** (Updated with comprehensive data)
 
 Complete slide-by-slide breakdown covering:
@@ -151,7 +174,7 @@ Complete slide-by-slide breakdown covering:
 
 ---
 
-### 5. **MARKETING_CREATIVE_IDEAS_PLAN.md**
+### 7. **MARKETING_CREATIVE_IDEAS_PLAN.md**
 **Detailed execution playbook**
 
 Tactical guide including:
@@ -168,7 +191,7 @@ Tactical guide including:
 
 ---
 
-### 6. **30_DAY_ENGAGEMENT_PLAN.md** 🆕
+### 8. **30_DAY_ENGAGEMENT_PLAN.md**
 **Tactical day-by-day operational plan** for Phase 1 (Fix Foundation)
 
 **What's Inside:**
@@ -187,7 +210,7 @@ Tactical guide including:
 
 ---
 
-### 7. **30_Day_Engagement_Journey.md**
+### 9. **30_Day_Engagement_Journey.md**
 **Email/SMS copy and behavioral trigger journey**
 
 **What's Inside:**
@@ -211,7 +234,7 @@ Tactical guide including:
 
 ---
 
-### 8. **Sprint_0_Execution_Checklist.md**
+### 10. **Sprint_0_Execution_Checklist.md**
 **10-day sprint checklist** for rapid foundation launch
 
 **What's Inside:**
@@ -238,7 +261,7 @@ Tactical guide including:
 
 ---
 
-### 9. **PRESENTATION_SPEAKER_NOTES.md**
+### 11. **PRESENTATION_SPEAKER_NOTES.md**
 **Detailed speaker notes** for presenting marketing strategy
 
 **What's Inside:**
