@@ -168,6 +168,49 @@ Tactical guide including:
 
 ---
 
+### 6. **30_DAY_ENGAGEMENT_PLAN.md** 🆕
+**Tactical day-by-day operational plan** for Phase 1 (Fix Foundation)
+
+**What's Inside:**
+- Day-by-day tasks for all 30 days (Week 1-4 breakdown)
+- Emergency audit checklist (Rewards Queue crisis)
+- Support agent hiring & onboarding
+- Bonus automation build timeline
+- Content production schedule (articles + videos)
+- Influencer outreach & contracting
+- Email campaign setup & testing
+- Daily standup templates
+- Week-by-week success metrics
+- Gate check criteria before Phase 2
+
+**Best For:** Project managers, operations team, daily execution
+
+---
+
+### 7. **30_Day_Engagement_Journey.md**
+**Email/SMS copy and behavioral trigger journey**
+
+**What's Inside:**
+- 6 email templates (Spanish + English):
+  - Welcome email (T+0)
+  - Funding reminder (T+12h)
+  - DD setup tutorial (T+24h)
+  - Card activation (T+5-7 days)
+  - Rewards education (T+3 days)
+  - Multi-product benefits (T+7 days)
+- 6 SMS templates (trigger-based)
+- 3 push notification templates
+- A/B test plan (incentive amounts, frequency, timing)
+- Technical implementation (SendGrid, Twilio, Firebase)
+- Journey metrics dashboard
+- Unsubscribe handling
+
+**Best For:** Marketing automation, copywriters, CRM setup
+
+**Note:** Use alongside 30_DAY_ENGAGEMENT_PLAN.md for complete execution
+
+---
+
 ## 🎯 Quick Start Guide
 
 **If you have 5 minutes:** Open `MyBambu_Interactive_Presentation_v2.html` → Read Crisis Analysis tab
@@ -176,7 +219,11 @@ Tactical guide including:
 
 **If you have 2 hours:** Read `COMPREHENSIVE_SURVEY_ANALYSIS.md` (crisis analysis + 8-month trends + loyalty insights)
 
-**If you're implementing:** Read entire `COMPREHENSIVE_SURVEY_ANALYSIS.md`, review 3-phase roadmap in v2 presentation
+**If you're implementing:**
+1. Read `COMPREHENSIVE_SURVEY_ANALYSIS.md` for strategy
+2. Follow `30_DAY_ENGAGEMENT_PLAN.md` for daily execution
+3. Use `30_Day_Engagement_Journey.md` for email/SMS copy
+4. Review 3-phase roadmap in v2 presentation
 
 ---
 
