@@ -9,25 +9,26 @@ Based on 17,000+ customer survey responses (8 months) | 10,100% projected ROI | 
 ## 📁 Repository Contents
 
 ### 1. **MyBambu_Marketing_Presentation.html** 🆕 LATEST
-**24-slide interactive presentation deck** based on MARKETING_PRESENTATION_DECK.md with official brand colors
+**Scrollable 24-slide presentation** based on MARKETING_PRESENTATION_DECK.md with official brand colors
 
 **Features:**
 - ✅ Official MyBambu Brand Guidelines 2025 colors (#27FB6B Synthetic Spearmint, #00052E Blue Black)
-- 📊 24 slides covering complete marketing strategy
+- 📜 Smooth scrollable design - all 24 slides visible
+- 📊 Complete marketing strategy coverage
 - 🎯 All 5 campaign pillars with detailed breakdowns
 - 💰 Complete ROI analysis ($219K budget, 10,100% ROI)
-- 🎨 Professional slide design with animations & transitions
-- ⌨️ Keyboard navigation (Arrow keys, Home, End)
+- 🎨 Professional slide design with smooth transitions
 - 📱 Mobile responsive design
-- 📈 Progress bar and slide counter
+- 📈 Progress bar tracks scroll position
+- ⬆️ Scroll-to-top button for easy navigation
 
 **How to Use:**
 1. Download and open in any browser (Chrome, Safari, Firefox)
-2. Navigate with arrow keys or buttons
-3. Present directly from browser (F11 for fullscreen)
-4. Perfect for executive presentations
+2. Scroll through all slides continuously
+3. Use scroll-to-top button to return to beginning
+4. Perfect for detailed review and sharing
 
-**Best For:** Board presentations, investor pitches, executive reviews
+**Best For:** Detailed review, team sharing, continuous reading
 
 ---
 
