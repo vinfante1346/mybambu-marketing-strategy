@@ -48,7 +48,115 @@ PPC-30: 2.8
 
 ---
 
-## SLIDE 3: THE GAP
+## SLIDE 3: CRISIS ALERT - DECLINING CSAT
+**Layout**: Alert banner + trend chart
+
+**Visual Elements**:
+- Top: Red alert banner with warning icon
+- Title: "🚨 CRITICAL: CSAT Declining Despite Strong Product"
+- Main chart: Line graph showing CSAT trend
+
+**CSAT Trend** (June → September 2025):
+```
+4.0 ┤
+3.9 ┤
+3.8 ┤
+3.7 ┤      ●                  ← July Peak (3.62)
+3.6 ┤     ╱ ╲
+3.5 ┤    ╱   ●                ← August (3.56)
+3.4 ┤ ●       ╲
+3.3 ┤           ╲
+3.2 ┤            ●            ← September (3.41) DROP!
+    └────────────────────
+   Jun   Jul   Aug   Sep
+```
+
+**Bottom Callout**: "6% decline from peak. Operations crisis blocking growth."
+
+**Design**: Red/orange warning theme
+
+---
+
+## SLIDE 4: ROOT CAUSE - REWARDS QUEUE CRISIS
+**Layout**: Split screen with problem breakdown
+
+**Left Side** (The Crisis):
+```
+Rewards Queue Satisfaction
+╔════════════════════════╗
+║   39%  SATISFIED       ║
+║   44%  UNSATISFIED 🔴  ║
+║   17%  NEUTRAL         ║
+╚════════════════════════╝
+
+Lowest satisfaction across ALL queues
+```
+
+**Right Side** (What's Broken):
+- ❌ Bonus payouts delayed 7+ days
+- ❌ No tracking UI for customers
+- ❌ Manual review process (can't scale)
+- ❌ August: 43% unsatisfied with referral bonuses
+
+**Bottom Callout Box** (Red):
+"THIS BLOCKS ALL GAMIFICATION CAMPAIGNS
+Tu Primera Semana & Referidos cannot launch until this is fixed."
+
+---
+
+## SLIDE 5: SURVEY DATA - THE FOUNDATION
+**Layout**: Stats dashboard
+
+**Visual**: 3×2 grid of key survey findings
+
+```
+┌─────────────────────┬─────────────────────┐
+│  📊 17,000+         │  📈 76%             │
+│  Total Responses    │  Activation Rate    │
+│  Across 8 months    │  (with education)   │
+├─────────────────────┼─────────────────────┤
+│  💚 84%             │  ⚠️ 73%             │
+│  Product NPS        │  Service NPS        │
+│  (Strong!)          │  (11-point GAP)     │
+├─────────────────────┼─────────────────────┤
+│  💰 70%             │  🔄 56%             │
+│  Want Cashback      │  Would Return       │
+│  (Loyalty survey)   │  (Churned customers)│
+└─────────────────────┴─────────────────────┘
+```
+
+**Bottom Text**: "8 months of data reveal $22M opportunity"
+
+---
+
+## SLIDE 6: THE 3-PHASE APPROACH
+**Layout**: Timeline roadmap
+
+**Visual**: 3 large boxes in sequence (horizontal)
+
+**Phase 1: Fix Foundation** (Month 1) 🔴 URGENT
+- Automate bonus payouts
+- Improve response times
+- Launch non-ops campaigns (Historias, Education)
+- Cost: $54K
+
+**Phase 2: Launch Gamification** (Month 2-3) 🟡 CRITICAL
+- Tu Primera Semana (soft launch → scale)
+- Recompensas MyBambu (cashback)
+- Referidos = Familia
+- Cost: $120K
+
+**Phase 3: Scale + Win-Back** (Month 4-6) 🟢 GROWTH
+- Win-back campaign (56% of churned)
+- VIP support tier
+- Community events
+- Cost: $74K
+
+**Bottom**: Total Investment: $219K → $22M LTV (10,000% ROI)
+
+---
+
+## SLIDE 7: THE GAP
 **Layout**: Comparison chart
 
 **Visual**: Side-by-side comparison
@@ -73,7 +181,7 @@ PPC-30: 2.8
 
 ---
 
-## SLIDE 4: OUR MISSION
+## SLIDE 8: OUR MISSION
 **Layout**: Full-screen quote
 
 **Visual**:
@@ -93,32 +201,44 @@ for Latino families."
 
 ---
 
-## SLIDE 5: STRATEGY OVERVIEW
-**Layout**: 4 quadrants
+## SLIDE 9: STRATEGY OVERVIEW
+**Layout**: 5 pillars (pentagon design)
 
-**Title**: "4 Campaign Pillars"
+**Title**: "5 Campaign Pillars (Updated Strategy)"
 
-**Quadrant 1** (Top Left):
+**Pillar 1** (Top):
 - Icon: 🎮 Game controller
 - Title: "Tu Primera Semana"
 - Subtitle: "Gamified Onboarding"
+- Status: 🔴 BLOCKED (Needs ops fix)
 
-**Quadrant 2** (Top Right):
+**Pillar 2** (Top Right):
 - Icon: 👥 People
 - Title: "Referidos = Familia"
 - Subtitle: "Viral Growth"
+- Status: 🔴 BLOCKED (Needs ops fix)
 
-**Quadrant 3** (Bottom Left):
+**Pillar 3** (Bottom Right):
 - Icon: ❤️ Heart
 - Title: "Historias Reales"
 - Subtitle: "Build Trust"
+- Status: ✅ READY (Can launch Month 1)
 
-**Quadrant 4** (Bottom Right):
+**Pillar 4** (Bottom Left):
 - Icon: 🎓 Graduation cap
 - Title: "Educación Financiera"
 - Subtitle: "Be the Advisor"
+- Status: ✅ READY (Can launch Month 1)
 
-**Visual**: Each quadrant has different pastel color background
+**Pillar 5** (Top Left) 🆕:
+- Icon: 💰 Money wings
+- Title: "Recompensas MyBambu"
+- Subtitle: "Cashback & Loyalty"
+- Status: 🟡 Month 2-3 (Engineering required)
+
+**Visual**: Pentagon design with color-coded status badges
+
+**Bottom Note**: "5th pillar added based on loyalty survey data (70% demand cashback)"
 
 ---
 
@@ -798,9 +918,210 @@ multiple banking products?
 
 ---
 
+# CAMPAIGN 5: RECOMPENSAS MYBAMBU (NEW!)
+
+## SLIDE 34: CAMPAIGN 5 - TITLE SLIDE
+**Layout**: Hero image
+
+**Visual**:
+- Background: Gold/platinum gradient with sparkles
+- Large text: "Recompensas MyBambu"
+- Subtext: "Because Your Loyalty Deserves Rewards"
+- Badge: "🆕 NEW PILLAR - Added from Loyalty Survey Data"
+
+**Design**: Premium, rewarding, elevated
+
+---
+
+## SLIDE 35: THE INSIGHT - LOYALTY SURVEY
+**Layout**: Big stat + explanation
+
+**Visual**:
+- Top: Huge percentage
+```
+70%
+```
+- Middle: Survey context
+"of Emerald & Diamond customers
+want CASHBACK as their #1 reward"
+
+**Bottom callout box**:
+"Survey: 483 responses from top-tier customers
+Without cashback, we lose high-value customers to Chime/Dave"
+
+**Source**: August 2025 Loyalty Customer Survey
+
+---
+
+## SLIDE 36: THE 3-TIER STRUCTURE
+**Layout**: Side-by-side tier comparison
+
+**Visual**: 3 cards showing tier benefits
+
+**Tier 1: Jade** (All Users)
+```
+🟢 Jade
+━━━━━━━━━━━━━━━
+✓ 0.5% cashback on debit purchases
+✓ Points on transactions
+✓ Redeem for cashback/gift cards
+```
+
+**Tier 2: Emerald** ($500/mo direct deposit)
+```
+💚 Emerald
+━━━━━━━━━━━━━━━
+✓ 1% cashback on all purchases
+✓ 2 free international transfers/month
+✓ Priority support (12-hour SLA)
+✓ Birthday bonus ($10)
+```
+
+**Tier 3: Diamond** ($2,000/mo direct deposit)
+```
+💎 Diamond
+━━━━━━━━━━━━━━━
+✓ 1.5% cashback on all purchases
+✓ UNLIMITED free international transfers
+✓ VIP support (1-hour SLA)
+✓ Dedicated account manager
+✓ iPhone raffle (annual)
+```
+
+---
+
+## SLIDE 37: SEGMENTATION STRATEGY
+**Layout**: Split comparison
+
+**Title**: "Not All Customers Want the Same Rewards"
+
+**Left Side: Spanish Speakers** (79% of loyalty customers)
+- 🔥 Over-index on: Transfer fee relief
+- Why: Remittance behavior (send money home)
+- Strategy: Emphasize free transfers + cashback
+
+**Right Side: English Speakers** (21% of loyalty customers)
+- 🔥 Prefer: Cashback + digital gift cards
+- Why: US-based, transactional focus
+- Strategy: Emphasize cashback percentage
+
+**Bottom: Age 45+**
+- 🔥 Unique preference: VIP service
+- Why: Value personal attention, higher LTV
+- Strategy: Dedicated account manager for Diamond
+
+---
+
+## SLIDE 38: COMPETITIVE LANDSCAPE
+**Layout**: Comparison table
+
+**Title**: "We're Behind on Cashback"
+
+```
+┌──────────────┬─────────────┬──────────────┬──────────────┐
+│ Competitor   │ Cashback    │ Transfers    │ VIP Service  │
+├──────────────┼─────────────┼──────────────┼──────────────┤
+│ Chime        │ 1% cashback │ Limited      │ No           │
+│ Dave         │ 1% cashback │ Limited      │ No           │
+│ Current      │ Up to 4%    │ No           │ No           │
+│ MyBambu      │ NONE ❌     │ Competitive  │ No           │
+└──────────────┴─────────────┴──────────────┴──────────────┘
+```
+
+**Bottom callout** (Red):
+"We're the ONLY Latino-focused neobank WITHOUT cashback.
+This is a retention risk for high-value customers."
+
+**After Recompensas Launch**:
+```
+MyBambu: 0.5-1.5% tiered + FREE transfers + VIP service
+= BEST VALUE for Latino families
+```
+
+---
+
+## SLIDE 39: LAUNCH ANNOUNCEMENT MOCK
+**Layout**: Email mockup
+
+**Visual**: iPhone showing email
+
+**Email Preview**:
+```
+From: Ana from MyBambu
+Subject: 💰 Anuncio GRANDE: ¡Ahora ganás con cada compra!
+
+Hola María,
+
+Tengo noticias que te van a encantar...
+
+A partir de HOY, cada vez que usas tu
+tarjeta MyBambu, ganás dinero de regreso.
+
+Sí, leíste bien. CASHBACK. 💸
+
+━━━━━━━━━━━━━━━━━━━━━━━
+Tu nivel: 💚 EMERALD
+Tu cashback: 1% en TODAS tus compras
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Ejemplo:
+$500 en compras = $5 de regreso
+$1,000 en compras = $10 de regreso
+$3,000 en compras = $30 de regreso
+
+PLUS: 2 transferencias internacionales
+GRATIS cada mes (valor: $10)
+
+¿Cómo activar?
+Ya está activado. Sólo usa tu tarjeta. 💳
+
+[Ver Mi Cashback]
+
+PD: Mientras más usas, más ganas.
+¿Simple, no?
+
+Con cariño,
+Ana & el equipo MyBambu 🌴
+```
+
+---
+
+## SLIDE 40: EXPECTED RESULTS
+**Layout**: Metrics dashboard
+
+**Title**: "Campaign Impact - Recompensas MyBambu"
+
+**Visual**: 4 key metrics
+
+```
+┌──────────────────────────────────────┐
+│ 💳 Transaction Volume                │
+│    +20% increase                     │
+│    (customers spend more for         │
+│     cashback rewards)                │
+├──────────────────────────────────────┤
+│ 🔁 Churn Reduction (Top Tier)       │
+│    Emerald/Diamond churn             │
+│    4.2% → 2.1% (50% reduction)       │
+├──────────────────────────────────────┤
+│ 📊 Engagement Lift                   │
+│    Emerald/Diamond users             │
+│    PPC-30: 2.1 → 2.9                 │
+├──────────────────────────────────────┤
+│ 💰 Cost vs Benefit                   │
+│    Cashback Cost: $50K/year          │
+│    Interchange Revenue: $180K        │
+│    Net Positive: +$130K              │
+└──────────────────────────────────────┘
+```
+
+**Bottom**: "Cashback program PAYS FOR ITSELF through increased transaction volume"
+
+---
+
 # CREATIVE EXECUTIONS
 
-## SLIDE 34: CREATIVE CONCEPT 1
+## SLIDE 41: CREATIVE CONCEPT 1
 **Layout**: Full-screen mockup
 
 **Title**: "Semana de Bonos Locos" (Crazy Bonus Week)
@@ -995,87 +1316,132 @@ What would $300 mean to you? 💭
 
 ---
 
-## SLIDE 41: BUSINESS IMPACT
+## SLIDE 47: BUSINESS IMPACT (UPDATED)
 **Layout**: Large metrics with trend lines
 
-**Title**: "Marketing Impact on PPC-30"
+**Title**: "Marketing Impact on PPC-30 - Updated 3-Phase Approach"
 
-**Visual**: Line graph
+**Visual**: Line graph with phase markers
 
 ```
           PPC-30 Growth
-3.0 │                          ╱─
-2.8 │                      ╱───  ← Target
-2.5 │                  ╱───
-2.0 │              ╱───
-1.5 │          ╱───
-1.2 │─────────                   ← Baseline
-    │─────────────────────────────────
+2.8 │                                ╱── ← Target
+2.5 │                            ╱───
+2.0 │                    ╱───────          ← Phase 3: Scale
+1.7 │            ╱───────                  ← Phase 2: Gamification
+1.5 │        ╱───
+1.2 │────────                              ← Baseline
+    │─────────────────────────────────────────
     M0  M1  M2  M3  M4  M5  M6
+
+    Phase 1: Fix Foundation (Ops fixes, Education, Stories)
+    Phase 2: Launch Gamification (Tu Primera Semana, Cashback, Referidos)
+    Phase 3: Scale + Win-Back (Events, VIP tier, churned customers)
 ```
 
 **Annotations**:
-- M0: Baseline (1.2)
-- M1: "Tu Primera Semana" launch (1.4)
-- M2: Referral program (1.7)
-- M3: Education series (2.0)
-- M4: Events begin (2.3)
-- M5: Ambassador program (2.5)
-- M6: Target achieved (2.8)
+- M0: Baseline (1.2) - Operations broken
+- M1: Fix ops, launch Education + Stories (1.3)
+- M2-M3: Tu Primera Semana + Cashback (1.6)
+- M3: Referidos = Familia (1.8)
+- M4-M5: Win-back + VIP tier (2.1)
+- M6: Target achieved (2.0+)
 
-**Result**: 133% increase in 6 months
+**Key Change**: Must fix operations FIRST before scaling campaigns
+
+**Result**: 67% increase in 6 months (more conservative due to ops fixes)
 
 ---
 
-## SLIDE 42: ROI BREAKDOWN
+## SLIDE 48: ROI BREAKDOWN (UPDATED)
 **Layout**: Financial summary
 
-**Title**: "Marketing ROI - 6 Month Summary"
+**Title**: "Marketing ROI - 6 Month Summary (Updated Budget)"
 
 **Visual**: Table + chart
 
 ```
-┌─────────────────────┬──────────────────┐
-│ Marketing Spend     │     $124,000     │
-├─────────────────────┼──────────────────┤
-│ New Users Acquired  │      10,000      │
-├─────────────────────┼──────────────────┤
-│ Avg LTV per User    │       $800       │
-├─────────────────────┼──────────────────┤
-│ Total LTV           │   $8,000,000     │
-├─────────────────────┼──────────────────┤
-│ ROI                 │      6,350%      │
-└─────────────────────┴──────────────────┘
+┌─────────────────────────────┬──────────────────┐
+│ Total Investment            │     $219,000     │
+│ (Marketing + Ops Fixes)     │                  │
+├─────────────────────────────┼──────────────────┤
+│ New Users (Referrals)       │      10,000      │
+├─────────────────────────────┼──────────────────┤
+│ Activated Users (Education) │      13,680      │
+├─────────────────────────────┼──────────────────┤
+│ Win-Back Users (Churned)    │       3,000      │
+├─────────────────────────────┼──────────────────┤
+│ Avg LTV per User            │        $800      │
+├─────────────────────────────┼──────────────────┤
+│ Total LTV Generated         │  $22,340,000     │
+├─────────────────────────────┼──────────────────┤
+│ ROI                         │    10,100%       │
+└─────────────────────────────┴──────────────────┘
 ```
 
 **Chart**: Bar chart showing spend vs. revenue
-- Spend: $124K (small bar)
-- Revenue: $8M (large bar)
+- Spend: $219K (small bar)
+- Revenue: $22.3M (massive bar)
 
-**Bottom**: "Every $1 spent = $64 in lifetime value"
+**Bottom**: "Every $1 spent = $102 in lifetime value"
+
+**Conservative Scenario** (50% of targets):
+- LTV: $11M | ROI: 5,000% | Still exceptional
 
 ---
 
-## SLIDE 43: BUDGET ALLOCATION
-**Layout**: Pie chart
+## SLIDE 49: BUDGET ALLOCATION (UPDATED)
+**Layout**: Stacked bar chart
 
-**Title**: "6-Month Marketing Budget: $124K"
+**Title**: "6-Month Total Budget: $219K (Marketing + Operations)"
 
-**Visual**: Pie chart with 8 slices
+**Visual**: Stacked horizontal bars showing 3 phases
 
+**PHASE 1: Fix Foundation** ($54K - Month 1)
 ```
-🟢 User Bonuses (36%): $45K
-🔵 Events (19%): $24K
-🟣 Influencers (10%): $13K
-🟡 Social Ads (12%): $15K
-🟠 Content (6%): $8K
-⚫ Ambassador (5%): $6K
-⚪ Merch (4%): $5K
-🔴 Tools/Other (8%): $9K
+🔴 Operational Fixes: $30K
+   - Bonus automation system
+   - 2 additional support agents
+   - Response time improvements
+
+🟢 Content Production: $12K
+   - 100 FAQ articles
+   - 15 video tutorials
+
+🟣 Historias Reales: $12K
+   - 5 micro-influencers
+   - Customer story videos
 ```
 
-**Key Insight**: 36% goes directly to customers (bonuses)
-vs. traditional marketing (100% to ad platforms)
+**PHASE 2: Launch Gamification + Cashback** ($120K - Months 2-3)
+```
+🟢 Tu Primera Semana Bonuses: $45K
+   - 1,000 users × $43/user (soft launch → scale)
+
+💰 Recompensas MyBambu: $50K
+   - Cashback program launch
+   - Tiered rewards structure
+   - Engineering/product build
+
+🟡 Referidos = Familia: $25K
+   - Referral bonuses + incentives
+   - Viral mechanics (WhatsApp share)
+```
+
+**PHASE 3: Scale + Win-Back** ($74K - Months 4-6)
+```
+🔄 Win-Back Campaign: $35K
+   - Email/SMS to 30K churned customers
+   - $10 reactivation offer × 3,000 users
+
+🔵 Community Events: $24K
+   - TX, FL, CA meetups
+
+🟣 Expand Influencers: $15K
+   - 10 → 15 influencers
+```
+
+**Bottom**: "Integrated approach: Fix operations → Launch campaigns → Scale growth"
 
 ---
 

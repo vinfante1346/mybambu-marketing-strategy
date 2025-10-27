@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBambu Marketing Strategy - Comprehensive Analysis (8 Months Data)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1E3A8A 0%, #00D4AA 100%);
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        .alert-banner {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.95; }
+        }
+
+        .alert-banner h2 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .metrics-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .metric-card.warning {
+            border: 3px solid #f59e0b;
+        }
+
+        .metric-card.critical {
+            border: 3px solid #ef4444;
+        }
+
+        .metric-label {
+            font-size: 0.9em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-bottom: 5px;
+        }
+
+        .metric-change {
+            font-size: 0.9em;
+            color: #00D4AA;
+            font-weight: 600;
+        }
+
+        .metric-change.negative {
+            color: #ef4444;
+        }
+
+        .trend-indicator {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2em;
+        }
+
+        .progress-bar {
+            background: #e5e7eb;
+            height: 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #00D4AA 0%, #1E3A8A 100%);
+            height: 100%;
+            transition: width 1s ease;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            background: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: #1E3A8A;
+        }
+
+        .tab:hover {
+            background: #f3f4f6;
+        }
+
+        .tab.active {
+            background: #1E3A8A;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #1E3A8A;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #00D4AA;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #1E3A8A;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .campaign-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .campaign-card:hover {
+            border-color: #00D4AA;
+            box-shadow: 0 4px 12px rgba(0,212,170,0.2);
+        }
+
+        .campaign-card.expanded {
+            grid-column: 1 / -1;
+            background: #f9fafb;
+        }
+
+        .campaign-card.blocked {
+            opacity: 0.6;
+            border-color: #ef4444;
+            background: #fee2e2;
+        }
+
+        .campaign-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .campaign-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1E3A8A;
+        }
+
+        .campaign-badge {
+            background: #00D4AA;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+
+        .campaign-badge.blocked {
+            background: #ef4444;
+        }
+
+        .campaign-badge.ready {
+            background: #10b981;
+        }
+
+        .trend-chart {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .chart-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .chart-label {
+            width: 100px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .chart-fill {
+            flex: 1;
+            height: 30px;
+            background: linear-gradient(90deg, #00D4AA 0%, #1E3A8A 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .insight-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .insight-box.critical {
+            background: #fee2e2;
+            border-left-color: #ef4444;
+        }
+
+        .insight-box.success {
+            background: #d1fae5;
+            border-left-color: #10b981;
+        }
+
+        .insight-box strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .calculator {
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        .calc-result {
+            background: #1E3A8A;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .calc-result-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: #1E3A8A;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #00D4AA;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: #f3f4f6;
+            font-weight: 600;
+            color: #1E3A8A;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+            margin-top: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #00D4AA;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #00D4AA;
+            border: 3px solid white;
+        }
+
+        .timeline-week {
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        @media print {
+            .tabs { display: none; }
+            .tab-content { display: block !important; page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MyBambu Marketing Strategy</h1>
+            <p class="subtitle">Based on 17,000+ Survey Responses | 8 Months of Data (Feb-Sep 2025)</p>
+        </header>
+
+        <!-- Crisis Alert Banner -->
+        <div class="alert-banner">
+            <h2>🚨 CRITICAL ALERT: CSAT Declining Despite Strong Product</h2>
+            <p><strong>CSAT dropped 6% (3.62 → 3.41)</strong> from July to September. <strong>Rewards Queue at 39% satisfaction.</strong> Operations must be fixed before scaling campaigns.</p>
+        </div>
+
+        <!-- KPI Dashboard -->
+        <div class="metrics-dashboard">
+            <div class="metric-card critical">
+                <span class="trend-indicator">📉</span>
+                <div class="metric-label">CSAT Score (September)</div>
+                <div class="metric-value">3.41</div>
+                <div class="metric-change negative">Down from 3.62 (July Peak) | -6%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 68%"></div>
+                </div>
+            </div>
+
+            <div class="metric-card warning">
+                <span class="trend-indicator">⚠️</span>
+                <div class="metric-label">NPS (September)</div>
+                <div class="metric-value">53%</div>
+                <div class="metric-change negative">Volatile: 47% (Aug) → 53% (Sep)</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 53%"></div>
+                </div>
+            </div>
+
+            <div class="metric-card critical">
+                <span class="trend-indicator">🔴</span>
+                <div class="metric-label">Rewards Queue Satisfaction</div>
+                <div class="metric-value">39%</div>
+                <div class="metric-change negative">Critical Issue | 44% Unsatisfied</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 39%; background: #ef4444;"></div>
+                </div>
+            </div>
+
+            <div class="metric-card warning">
+                <span class="trend-indicator">⏱️</span>
+                <div class="metric-label">Response Time Satisfaction</div>
+                <div class="metric-value">69%</div>
+                <div class="metric-change negative">Lowest Driver | 19% Unsatisfied</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 69%; background: #f59e0b;"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <span class="trend-indicator">💚</span>
+                <div class="metric-label">Product NPS (Strong)</div>
+                <div class="metric-value">84%</div>
+                <div class="metric-change">Competitive prices, ease of use</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 84%"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <span class="trend-indicator">📊</span>
+                <div class="metric-label">Total Survey Responses</div>
+                <div class="metric-value">17K+</div>
+                <div class="metric-change">Across 9 different surveys (8 months)</div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('crisis')">Crisis Analysis</button>
+            <button class="tab" onclick="showTab('overview')">Executive Overview</button>
+            <button class="tab" onclick="showTab('trends')">8-Month Trends</button>
+            <button class="tab" onclick="showTab('loyalty')">Loyalty Insights</button>
+            <button class="tab" onclick="showTab('campaigns')">5-Pillar Strategy</button>
+            <button class="tab" onclick="showTab('roadmap')">Fix & Launch Roadmap</button>
+            <button class="tab" onclick="showTab('calculator')">ROI Calculator</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="crisis" class="tab-content active">
+            <h2>🚨 Crisis Analysis: What's Broken & How to Fix It</h2>
+
+            <div class="insight-box critical">
+                <strong>The Problem: CSAT is Declining</strong>
+                July: 3.62 (Peak) → August: 3.56 → September: 3.41 (Lowest)
+                <br><strong>Root Cause:</strong> Operations can't keep up with demand. Rewards/bonus fulfillment is broken.
+            </div>
+
+            <h3>Critical Issue #1: Rewards Queue Crisis</h3>
+
+            <div class="trend-chart">
+                <h4>Satisfaction by Queue (September)</h4>
+                <div class="chart-bar">
+                    <div class="chart-label">Rewards Queue:</div>
+                    <div class="chart-fill" style="width: 39%; background: #ef4444;">39% Satisfied</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">New Acct Bonus:</div>
+                    <div class="chart-fill" style="width: 41%; background: #ef4444;">41% Satisfied</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Bambu Queue:</div>
+                    <div class="chart-fill" style="width: 50%; background: #f59e0b;">50% Satisfied</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Card Queue:</div>
+                    <div class="chart-fill" style="width: 81%; background: #10b981;">81% Satisfied</div>
+                </div>
+            </div>
+
+            <p><strong>What's Happening:</strong></p>
+            <ul style="margin-left: 30px; line-height: 2;">
+                <li>Customers completing actions (funding, referring) but <strong>not receiving promised bonuses</strong></li>
+                <li>August data shows <strong>45% satisfied, 43% unsatisfied</strong> with unpaid referral bonuses</li>
+                <li>Manual review process causing <strong>delays of 7+ days</strong></li>
+                <li>No tracking UI - customers can't see "bonus pending" status</li>
+            </ul>
+
+            <div class="insight-box critical">
+                <strong>Impact:</strong>
+                This blocks ALL gamification campaigns. Tu Primera Semana ($43 in bonuses) and Referidos = Familia will FAIL if bonus payouts don't work.
+            </div>
+
+            <h3>Critical Issue #2: Response Time Problems</h3>
+
+            <div class="trend-chart">
+                <h4>Satisfaction Drivers (September)</h4>
+                <div class="chart-bar">
+                    <div class="chart-label">Polite Staff:</div>
+                    <div class="chart-fill" style="width: 87%;">87% ✅</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Clear Communication:</div>
+                    <div class="chart-fill" style="width: 87%;">87% ✅</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Efficient Handling:</div>
+                    <div class="chart-fill" style="width: 82%;">82% ✅</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Knowledgeable Support:</div>
+                    <div class="chart-fill" style="width: 80%;">80% ✅</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Timely Response:</div>
+                    <div class="chart-fill" style="width: 69%; background: #f59e0b;">69% ⚠️ LOWEST</div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <strong>The Paradox:</strong>
+                Your agents are great people (polite, clear, knowledgeable) but hampered by broken processes (slow response, bonus issues).
+                <br><strong>Good News:</strong> This means the problem is fixable - fix the system, not the people.
+            </div>
+
+            <h3>Critical Issue #3: Service Perception Gap</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>NPS Score</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Competitive Prices</td>
+                        <td><strong>84%</strong></td>
+                        <td>🏆 Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>Innovative Features</td>
+                        <td><strong>83%</strong></td>
+                        <td>🏆 Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>Ease of Use</td>
+                        <td><strong>82%</strong></td>
+                        <td>🏆 Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>Quality Products</td>
+                        <td><strong>80%</strong></td>
+                        <td>🏆 Excellent</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td>Customer Service</td>
+                        <td><strong>73%</strong></td>
+                        <td>⚠️ <strong>11-point GAP</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box critical">
+                <strong>The Bottom Line:</strong>
+                Product is excellent (82-84% NPS). Service is dragging down overall perception (73% NPS).
+                <br>This 11-point gap explains why overall NPS is 63% instead of 84%.
+            </div>
+
+            <h3>🔧 The Fix: 3-Step Recovery Plan</h3>
+
+            <div class="campaign-grid">
+                <div class="campaign-card" style="border-color: #ef4444; border-width: 3px;">
+                    <div class="campaign-title" style="color: #ef4444;">URGENT: Month 1</div>
+                    <p><strong>Fix Rewards/Bonus System</strong></p>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>Automate bonus payments (<$50)</li>
+                        <li>Build tracking UI</li>
+                        <li>24-hour payout SLA</li>
+                        <li>Hire 2 support agents</li>
+                    </ul>
+                    <p><strong>Cost:</strong> $30K</p>
+                    <p><strong>Impact:</strong> Unblocks all campaigns</p>
+                </div>
+
+                <div class="campaign-card" style="border-color: #f59e0b; border-width: 3px;">
+                    <div class="campaign-title" style="color: #f59e0b;">HIGH: Month 2</div>
+                    <p><strong>Improve Response Times</strong></p>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>2-hour SLA (urgent cases)</li>
+                        <li>12-hour SLA (non-urgent)</li>
+                        <li>Triage system</li>
+                        <li>Auto-responders</li>
+                    </ul>
+                    <p><strong>Cost:</strong> Included in $30K</p>
+                    <p><strong>Impact:</strong> 69% → 80% satisfaction</p>
+                </div>
+
+                <div class="campaign-card" style="border-color: #10b981; border-width: 3px;">
+                    <div class="campaign-title" style="color: #10b981;">MEDIUM: Month 3</div>
+                    <p><strong>Launch at Scale</strong></p>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>Tu Primera Semana (full launch)</li>
+                        <li>Referidos = Familia</li>
+                        <li>Cashback program</li>
+                        <li>Win-back campaign</li>
+                    </ul>
+                    <p><strong>Cost:</strong> $189K</p>
+                    <p><strong>Impact:</strong> $22M LTV generated</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="overview" class="tab-content">
+            <h2>Executive Overview: The $22M Opportunity</h2>
+
+            <div class="insight-box success">
+                <strong>The Opportunity:</strong>
+                17,000+ survey responses reveal $22M+ in untapped LTV. 76% activation with education. 56% of churned customers would return. 70% of top-tier customers want cashback.
+            </div>
+
+            <h3>The Numbers</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Opportunity</th>
+                        <th>Current State</th>
+                        <th>With Strategy</th>
+                        <th>LTV Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Activation Rate</td>
+                        <td>68%</td>
+                        <td><strong>76%</strong> (with education)</td>
+                        <td>$10.9M (13,680 users)</td>
+                    </tr>
+                    <tr>
+                        <td>Referral Growth</td>
+                        <td>Low k (~0.3)</td>
+                        <td><strong>k=1.4</strong> (viral)</td>
+                        <td>$8M (10,000 users)</td>
+                    </tr>
+                    <tr>
+                        <td>Churn Recovery</td>
+                        <td>5.01% monthly</td>
+                        <td><strong>56% would return</strong></td>
+                        <td>$2.4M (3,000 users)</td>
+                    </tr>
+                    <tr>
+                        <td>Transaction Volume</td>
+                        <td>Baseline</td>
+                        <td><strong>+20%</strong> (cashback)</td>
+                        <td>$1.04M (retention + revenue)</td>
+                    </tr>
+                    <tr style="background: #d1fae5; font-weight: bold;">
+                        <td><strong>TOTAL</strong></td>
+                        <td colspan="2"><strong>Investment: $219K</strong></td>
+                        <td><strong>$22.34M LTV</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box">
+                <strong>ROI: 10,000%+</strong>
+                <br>Even if results are 50% of projections: <strong>5,000% ROI</strong>
+            </div>
+
+            <h3>The Challenge</h3>
+
+            <ul style="margin-left: 30px; line-height: 2; font-size: 1.1em;">
+                <li><strong>Operations are broken</strong> - Rewards Queue at 39% satisfaction blocks gamification</li>
+                <li><strong>CSAT declining</strong> - 3.62 → 3.41 (July to September) despite strong product</li>
+                <li><strong>Service perception gap</strong> - Product NPS 84%, Service NPS 73% (11-point gap)</li>
+                <li><strong>Must fix foundation first</strong> - Can't scale campaigns until bonus payouts work</li>
+            </ul>
+
+            <h3>The Strategy</h3>
+
+            <p style="font-size: 1.1em; margin: 20px 0;"><strong>3-Phase Approach:</strong></p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-week">PHASE 1: Fix Foundation (Month 1)</div>
+                    <p>Automate bonus payouts, improve response times, launch non-operational campaigns (Historias Reales, Educación Financiera)</p>
+                    <p><strong>Cost:</strong> $54K | <strong>Goal:</strong> Unblock gamification campaigns</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">PHASE 2: Launch Gamification + Cashback (Month 2-3)</div>
+                    <p>Tu Primera Semana, Referidos = Familia, Recompensas MyBambu (cashback program for loyalty)</p>
+                    <p><strong>Cost:</strong> $120K | <strong>Goal:</strong> Drive PPC-30 from 1.2 → 1.6</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">PHASE 3: Scale + Win-Back (Month 4-6)</div>
+                    <p>Win-back campaign (56% of churned), VIP support tier, community events, expand influencers</p>
+                    <p><strong>Cost:</strong> $74K | <strong>Goal:</strong> PPC-30 → 2.0, reduce churn to 4%</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="trends" class="tab-content">
+            <h2>8-Month Trends: What the Data Reveals</h2>
+
+            <h3>CSAT Trend (Declining ⬇️)</h3>
+
+            <div class="trend-chart">
+                <div class="chart-bar">
+                    <div class="chart-label">June:</div>
+                    <div class="chart-fill" style="width: 68.4%;">3.42</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">July:</div>
+                    <div class="chart-fill" style="width: 72.4%; background: #10b981;">3.62 🏆 PEAK</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">August:</div>
+                    <div class="chart-fill" style="width: 71.2%;">3.56</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">September:</div>
+                    <div class="chart-fill" style="width: 68.2%; background: #ef4444;">3.41 ⬇️ DROP</div>
+                </div>
+            </div>
+
+            <div class="insight-box critical">
+                <strong>Critical Trend:</strong>
+                CSAT dropped 6% from July peak. Need to identify what worked in July and replicate it. Also need to fix what broke in September (likely Rewards Queue issues).
+            </div>
+
+            <h3>NPS Trend (Volatile ⚠️)</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>NPS</th>
+                        <th>Change</th>
+                        <th>Analysis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>May</td>
+                        <td>50%</td>
+                        <td>Baseline</td>
+                        <td>Starting measurement</td>
+                    </tr>
+                    <tr>
+                        <td>June</td>
+                        <td>54.4%</td>
+                        <td>+4.4</td>
+                        <td>✅ Improvement</td>
+                    </tr>
+                    <tr>
+                        <td>July</td>
+                        <td>52.0%</td>
+                        <td>-2.4</td>
+                        <td>⚠️ Slight pullback</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td>August</td>
+                        <td><strong>47.0%</strong></td>
+                        <td><strong>-5.0</strong></td>
+                        <td>🔴 <strong>CRASH - What happened?</strong></td>
+                    </tr>
+                    <tr>
+                        <td>September</td>
+                        <td>53.0%</td>
+                        <td>+6.0</td>
+                        <td>✅ Recovery but not back to June</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box">
+                <strong>August Crisis Hypothesis:</strong>
+                NPS dropped 5 points in August. Loyalty survey (also August) shows top customers frustrated with rewards. Likely: Rewards program issues peaked in August, causing both NPS drop and loyalty customer dissatisfaction.
+            </div>
+
+            <h3>NPS by Category Trends (Jul-Aug-Sep)</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>July</th>
+                        <th>August</th>
+                        <th>September</th>
+                        <th>Trend</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Competitive Prices</td>
+                        <td>78%</td>
+                        <td>79%</td>
+                        <td>79%</td>
+                        <td>↗️ Stable/improving</td>
+                    </tr>
+                    <tr>
+                        <td>Quality Products/Services</td>
+                        <td>54%</td>
+                        <td>58%</td>
+                        <td>68%</td>
+                        <td>↗️ Improving significantly</td>
+                    </tr>
+                    <tr>
+                        <td>Ease of Use</td>
+                        <td>73%</td>
+                        <td>70%</td>
+                        <td>75%</td>
+                        <td>→ Stable</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>Customer Service</strong></td>
+                        <td><strong>54%</strong></td>
+                        <td><strong>58%</strong></td>
+                        <td><strong>73%</strong></td>
+                        <td>↗️ <strong>Improved but was terrible</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Innovative Features</td>
+                        <td>87%</td>
+                        <td>76%</td>
+                        <td>79%</td>
+                        <td>↘️ Declining from peak</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box">
+                <strong>Service Improving But Still Weak:</strong>
+                Customer service improved dramatically from July (54%) to September (73%) - 19-point jump! But still 11 points below product categories. Suggests fixes were implemented but not complete.
+            </div>
+
+            <div class="insight-box">
+                <strong>Innovative Features Declining:</strong>
+                87% → 79% from July to September. Customers want NEW FEATURES (loans, investments, credit). This ties to churn analysis: "not enough features" as top reason.
+            </div>
+        </div>
+
+        <div id="loyalty" class="tab-content">
+            <h2>Loyalty Customer Insights: What Top-Tier Customers Want</h2>
+
+            <div class="insight-box success">
+                <strong>Survey Context:</strong>
+                483 responses from Emerald & Diamond tier customers (current and past). These are your highest-value customers.
+            </div>
+
+            <h3>Reward Preferences (Crystal Clear Winner)</h3>
+
+            <div class="trend-chart">
+                <h4>What Top-Tier Customers Want</h4>
+                <div class="chart-bar">
+                    <div class="chart-label">Cashback:</div>
+                    <div class="chart-fill" style="width: 70%;">~70% 🏆 WINNER</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Transfer Fee Refunds:</div>
+                    <div class="chart-fill" style="width: 20%;">~20%</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Digital Gift Cards:</div>
+                    <div class="chart-fill" style="width: 10%;">~10%</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Free Bambu Pay:</div>
+                    <div class="chart-fill" style="width: 5%;">~5%</div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">VIP Service:</div>
+                    <div class="chart-fill" style="width: 3%;">~3%</div>
+                </div>
+            </div>
+
+            <div class="insight-box critical">
+                <strong>Strategic Implication:</strong>
+                Cashback is NON-NEGOTIABLE. 70% of your most valuable customers demand it. Without cashback program, you'll lose high-value customers to Chime/Dave (who offer cashback).
+            </div>
+
+            <h3>Segmentation by Language</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reward Type</th>
+                        <th>Spanish Speakers (79%)</th>
+                        <th>English Speakers (21%)</th>
+                        <th>Insight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cashback</td>
+                        <td><strong>High</strong></td>
+                        <td><strong>High</strong></td>
+                        <td>Universal appeal</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>Transfer Fee Relief</strong></td>
+                        <td><strong>Very High 🔥</strong></td>
+                        <td>Low</td>
+                        <td><strong>Spanish speakers over-index</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Digital Gift Cards</td>
+                        <td>Low</td>
+                        <td><strong>High</strong></td>
+                        <td>English speakers prefer</td>
+                    </tr>
+                    <tr>
+                        <td>Free Bambu Pay</td>
+                        <td><strong>High</strong></td>
+                        <td>Low</td>
+                        <td>Spanish speakers over-index</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box">
+                <strong>Remittance Behavior:</strong>
+                Spanish speakers (especially from GT/HN/MX/NI) over-index on transfer-related rewards because they send money home regularly. Must segment rewards strategy by language/nationality.
+            </div>
+
+            <h3>Segmentation by Age</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Age Group</th>
+                        <th>Top Preference</th>
+                        <th>Second Preference</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>18-27</td>
+                        <td>Cashback</td>
+                        <td>Digital Gift Cards</td>
+                    </tr>
+                    <tr>
+                        <td>27-36</td>
+                        <td>Cashback (universal)</td>
+                        <td>Transfer Fee Relief</td>
+                    </tr>
+                    <tr>
+                        <td>36-45</td>
+                        <td>Cashback</td>
+                        <td>Transfer Fee Relief</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>>45</strong></td>
+                        <td>Transfer Fee Relief</td>
+                        <td><strong>VIP Service 🏆</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box">
+                <strong>Older Customers Want White-Glove Service:</strong>
+                Customers over 45 uniquely value VIP service (priority line, dedicated account manager). This segment likely has highest LTV - worth investing in premium support tier.
+            </div>
+
+            <h3>Recommended Rewards Structure</h3>
+
+            <div class="campaign-grid">
+                <div class="campaign-card" style="border-color: #10b981; border-width: 2px;">
+                    <div class="campaign-title" style="color: #10b981;">Tier 1: Jade (All)</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li><strong>0.5% cashback</strong> on debit purchases</li>
+                        <li>Earn points on transactions</li>
+                        <li>Redeem for cashback or gift cards</li>
+                    </ul>
+                </div>
+
+                <div class="campaign-card" style="border-color: #00D4AA; border-width: 2px;">
+                    <div class="campaign-title" style="color: #00D4AA;">Tier 2: Emerald</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li><strong>1% cashback</strong> on all purchases</li>
+                        <li><strong>2 free intl transfers/month</strong></li>
+                        <li>Priority support (12-hour SLA)</li>
+                        <li>Birthday bonus ($10)</li>
+                    </ul>
+                </div>
+
+                <div class="campaign-card" style="border-color: #1E3A8A; border-width: 2px;">
+                    <div class="campaign-title" style="color: #1E3A8A;">Tier 3: Diamond</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li><strong>1.5% cashback</strong> on all purchases</li>
+                        <li><strong>Unlimited free intl transfers</strong></li>
+                        <li><strong>VIP support</strong> (1-hour SLA)</li>
+                        <li>Dedicated account manager</li>
+                        <li>iPhone raffle (annual)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="campaigns" class="tab-content">
+            <h2>5-Pillar Campaign Strategy (Updated)</h2>
+
+            <div class="insight-box">
+                <strong>Original Strategy Had 4 Pillars. Added 5th Based on Loyalty Survey Data.</strong>
+            </div>
+
+            <div class="campaign-grid">
+                <div class="campaign-card blocked">
+                    <div class="campaign-header">
+                        <div class="campaign-title">1. Tu Primera Semana</div>
+                        <div class="campaign-badge blocked">🔴 BLOCKED</div>
+                    </div>
+                    <p><strong>Goal:</strong> 70% completion of 7-day onboarding</p>
+                    <p><strong>Mechanic:</strong> Gamified milestones with $43 in bonuses</p>
+                    <p><strong>Impact:</strong> PPC-30 +0.6 in first month</p>
+                    <p style="margin-top: 10px; color: #ef4444;"><strong>⚠️ BLOCKED:</strong> Rewards Queue must be fixed first (39% satisfaction). Bonus payouts broken.</p>
+                    <p><strong>Launch Date:</strong> Month 2 (after operational fixes)</p>
+                </div>
+
+                <div class="campaign-card blocked">
+                    <div class="campaign-header">
+                        <div class="campaign-title">2. Referidos = Familia</div>
+                        <div class="campaign-badge blocked">🔴 BLOCKED</div>
+                    </div>
+                    <p><strong>Goal:</strong> Viral coefficient k=1.4</p>
+                    <p><strong>Mechanic:</strong> Tiered referral rewards ($20-$35 per friend)</p>
+                    <p><strong>Impact:</strong> 10K new users, CAC $15 vs $85</p>
+                    <p style="margin-top: 10px; color: #ef4444;"><strong>⚠️ BLOCKED:</strong> Same issue - referral bonus payouts broken (45% satisfied in August)</p>
+                    <p><strong>Launch Date:</strong> Month 3 (after Tu Primera Semana proven)</p>
+                </div>
+
+                <div class="campaign-card" style="border-color: #10b981; border-width: 2px;">
+                    <div class="campaign-header">
+                        <div class="campaign-title">3. Historias Reales</div>
+                        <div class="campaign-badge ready">✅ CAN LAUNCH</div>
+                    </div>
+                    <p><strong>Goal:</strong> Build trust through customer stories</p>
+                    <p><strong>Mechanic:</strong> Influencers + UGC program</p>
+                    <p><strong>Impact:</strong> CSAT +9 points, NPS +8%</p>
+                    <p style="margin-top: 10px; color: #10b981;"><strong>✅ READY:</strong> No operational dependencies. Uses soft skills (which are strong: 87% polite, clear).</p>
+                    <p><strong>Launch Date:</strong> Month 1 (immediate)</p>
+                </div>
+
+                <div class="campaign-card" style="border-color: #10b981; border-width: 2px;">
+                    <div class="campaign-header">
+                        <div class="campaign-title">4. Educación Financiera</div>
+                        <div class="campaign-badge ready">✅ CAN LAUNCH</div>
+                    </div>
+                    <p><strong>Goal:</strong> Close knowledge gap for Spanish speakers (20% don't understand)</p>
+                    <p><strong>Mechanic:</strong> 200+ articles, 30 videos, trigger-based delivery</p>
+                    <p><strong>Impact:</strong> 76% activation rate (from 68%)</p>
+                    <p style="margin-top: 10px; color: #10b981;"><strong>✅ READY:</strong> No operational dependencies. Addresses proven need (76% activation with education).</p>
+                    <p><strong>Launch Date:</strong> Month 1-2 (content production)</p>
+                </div>
+
+                <div class="campaign-card" style="border-color: #f59e0b; border-width: 2px;">
+                    <div class="campaign-header">
+                        <div class="campaign-title">5. Recompensas MyBambu 🆕</div>
+                        <div class="campaign-badge" style="background: #f59e0b;">⚠️ MONTH 2-3</div>
+                    </div>
+                    <p><strong>Goal:</strong> Retain high-value customers, drive transaction volume</p>
+                    <p><strong>Mechanic:</strong> Tiered cashback (0.5%-1.5%) + transfer fee relief</p>
+                    <p><strong>Impact:</strong> Transaction volume +20%, churn reduction in top tier</p>
+                    <p style="margin-top: 10px; color: #f59e0b;"><strong>⚠️ NEW PILLAR:</strong> Added based on loyalty survey (70% want cashback). Requires product build.</p>
+                    <p><strong>Launch Date:</strong> Month 2-3 (engineering required)</p>
+                </div>
+            </div>
+
+            <h3>Why the 5th Pillar is Critical</h3>
+
+            <div class="insight-box critical">
+                <strong>Missing from Original Strategy:</strong>
+                The original 4-pillar strategy didn't include cashback/rewards. Loyalty survey reveals 70% of top-tier customers DEMAND cashback. Without this, you'll lose high-value customers to competitors (Chime offers 1% cashback).
+            </div>
+
+            <h3>Campaign Launch Sequence</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-week">Month 1: Foundation + Non-Ops Campaigns</div>
+                    <p><strong>Launch:</strong> Historias Reales, Start Educación Financiera content production</p>
+                    <p><strong>Fix:</strong> Automate bonus payouts, improve response times</p>
+                    <p style="color: #10b981;"><strong>✅ No blockers for these campaigns</strong></p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Month 2-3: Gamification + Cashback</div>
+                    <p><strong>Launch:</strong> Tu Primera Semana (soft launch → scale), Recompensas MyBambu (cashback)</p>
+                    <p><strong>Requirement:</strong> Bonus system must be working (39% → 70%+ satisfaction)</p>
+                    <p style="color: #f59e0b;"><strong>⚠️ Contingent on Month 1 fixes</strong></p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Month 3-4: Viral + Retention</div>
+                    <p><strong>Launch:</strong> Referidos = Familia, Win-back campaign (56% of churned), VIP support tier</p>
+                    <p><strong>Requirement:</strong> Tu Primera Semana must prove bonus payouts work at scale</p>
+                    <p style="color: #1E3A8A;"><strong>Scale phase - full execution</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="roadmap" class="tab-content">
+            <h2>Fix & Launch Roadmap: Week-by-Week Plan</h2>
+
+            <div class="insight-box critical">
+                <strong>Critical Success Factor:</strong>
+                This timeline assumes you FIX OPERATIONS FIRST (Month 1). Attempting to scale campaigns before fixing bonus fulfillment will fail and waste budget.
+            </div>
+
+            <h3>PHASE 1: Fix the Foundation (Weeks 1-4)</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 1-2: Emergency Operational Fixes</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>Emergency audit of Rewards Queue (identify bottlenecks)</li>
+                        <li>Design automated bonus payout system (engineering spec)</li>
+                        <li>Hire 2 additional support agents (immediate start)</li>
+                        <li>Implement response time SLAs (2-hour urgent, 12-hour non-urgent)</li>
+                        <li>Set up triage queues (Urgent vs Non-Urgent, Bonus vs General)</li>
+                    </ul>
+                    <p><strong>Success Metric:</strong> Response time satisfaction 69% → 75%</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 3-4: Build + Test Automation</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>Build automated bonus payout system (engineering)</li>
+                        <li>Add bonus tracking UI ("Your $25 bonus pending, arrives in 18 hours")</li>
+                        <li>Test with 100 users (soft launch Tu Primera Semana pilot)</li>
+                        <li><strong>Launch Historias Reales</strong> (no operational dependencies)</li>
+                        <li>Begin content production for Educación Financiera (first 20 articles)</li>
+                    </ul>
+                    <p><strong>Success Metric:</strong> Rewards Queue satisfaction 39% → 60%+</p>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <strong>Month 1 Gate Check:</strong>
+                Do NOT proceed to Phase 2 unless:
+                <br>✅ Bonus payouts automated (24-hour SLA achieved)
+                <br>✅ Rewards Queue satisfaction above 60%
+                <br>✅ Response time satisfaction above 75%
+                <br>If these aren't met, extend Phase 1 by 2 weeks.
+            </div>
+
+            <h3>PHASE 2: Launch Education + Soft Launch Gamification (Weeks 5-8)</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 5-6: Education Hub Launch</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>Complete 100 FAQ articles (Spanish + English)</li>
+                        <li>Produce 15 video tutorials (most requested topics)</li>
+                        <li>Launch Educación Financiera hub on website</li>
+                        <li>Set up trigger emails (signed up but not funded → "How to fund")</li>
+                        <li>Contract 5 micro-influencers (Historias Reales expansion)</li>
+                    </ul>
+                    <p><strong>Success Metric:</strong> Activation rate 68% → 74% (76% is max from survey)</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 7-8: Tu Primera Semana Soft Launch</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>Soft launch Tu Primera Semana (100 users/day limit)</li>
+                        <li>Monitor bonus payouts (should be smooth now)</li>
+                        <li>A/B test bonus amounts (Day 1: $3 vs $5)</li>
+                        <li>Begin engineering work on cashback program (Recompensas)</li>
+                    </ul>
+                    <p><strong>Success Metric:</strong> Tu Primera Semana completion rate 60%+ (target: 70%)</p>
+                </div>
+            </div>
+
+            <h3>PHASE 3: Scale Gamification + Launch Cashback (Weeks 9-12)</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 9-10: Full Gamification Launch</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>Scale Tu Primera Semana to all new users (if soft launch successful)</li>
+                        <li>Target: 70% completion rate, 1,000 completers/month</li>
+                        <li>Design cashback program tiers (Jade/Emerald/Diamond)</li>
+                        <li>Get legal approval for cashback structure</li>
+                        <li>Build cashback tracking system</li>
+                    </ul>
+                    <p><strong>Success Metric:</strong> PPC-30 lift +0.3 for completers</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 11-12: Cashback + Referral Launch</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li><strong>Launch Recompensas MyBambu</strong> (cashback program)</li>
+                        <li>Announce to all users via email + push notification</li>
+                        <li><strong>Launch Referidos = Familia</strong> (tiered referral program)</li>
+                        <li>Monitor: Viral coefficient (target k>0.8 in first month)</li>
+                    </ul>
+                    <p><strong>Success Metric:</strong> Transaction volume +10%, 500+ referrals</p>
+                </div>
+            </div>
+
+            <h3>PHASE 4: Win-Back + Scale (Weeks 13-16)</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 13-14: Win-Back Campaign</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>Launch win-back campaign for churned customers</li>
+                        <li>Email: "We've improved! Cashback, faster support, new features"</li>
+                        <li>Offer: $10 to reactivate account</li>
+                        <li>Set up VIP support tier (hire 3 part-time VIP agents)</li>
+                    </ul>
+                    <p><strong>Success Metric:</strong> 3,000 reactivations (10% of target)</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-week">Week 15-16: Optimization + Events</div>
+                    <ul style="margin: 10px 0 10px 20px; line-height: 1.8;">
+                        <li>Monitor cashback economics (interchange revenue vs payout cost)</li>
+                        <li>Measure transaction volume lift (target: +20%)</li>
+                        <li>Plan first community event (Houston or Miami)</li>
+                        <li>Expand influencer partnerships (10 → 15 influencers)</li>
+                    </ul>
+                    <p><strong>Success Metric:</strong> Cashback enrollment 60% of active users</p>
+                </div>
+            </div>
+
+            <h3>Critical Path Dependencies</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Depends On</th>
+                        <th>Earliest Launch</th>
+                        <th>Risk Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Historias Reales</td>
+                        <td>None</td>
+                        <td><strong>Week 1</strong></td>
+                        <td style="color: #10b981;">✅ Low</td>
+                    </tr>
+                    <tr>
+                        <td>Educación Financiera</td>
+                        <td>Content production</td>
+                        <td><strong>Week 1-6</strong></td>
+                        <td style="color: #10b981;">✅ Low</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>Tu Primera Semana</strong></td>
+                        <td><strong>Bonus automation fixed</strong></td>
+                        <td><strong>Week 7 (earliest)</strong></td>
+                        <td style="color: #f59e0b;">⚠️ Medium</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>Referidos = Familia</strong></td>
+                        <td><strong>Tu Primera Semana proven</strong></td>
+                        <td><strong>Week 11 (earliest)</strong></td>
+                        <td style="color: #f59e0b;">⚠️ Medium</td>
+                    </tr>
+                    <tr>
+                        <td>Recompensas MyBambu</td>
+                        <td>Engineering build</td>
+                        <td><strong>Week 9-11</strong></td>
+                        <td style="color: #10b981;">✅ Low</td>
+                    </tr>
+                    <tr>
+                        <td>Win-Back Campaign</td>
+                        <td>Operational improvements complete</td>
+                        <td><strong>Week 13</strong></td>
+                        <td style="color: #10b981;">✅ Low</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="calculator" class="tab-content">
+            <h2>ROI Calculator: Updated with Comprehensive Data</h2>
+
+            <div class="calculator">
+                <h3>Interactive ROI Calculator</h3>
+                <p>Updated budget: $219K (includes operational fixes + 5 campaigns + win-back)</p>
+
+                <div class="input-group">
+                    <label for="budget">Total Marketing Budget ($)</label>
+                    <input type="number" id="budget" value="219000" oninput="calculateROI()">
+                </div>
+
+                <div class="input-group">
+                    <label for="newUsers">New Users Acquired (Referrals)</label>
+                    <input type="number" id="newUsers" value="10000" oninput="calculateROI()">
+                </div>
+
+                <div class="input-group">
+                    <label for="activatedUsers">Activated Users (Education)</label>
+                    <input type="number" id="activatedUsers" value="13680" oninput="calculateROI()">
+                </div>
+
+                <div class="input-group">
+                    <label for="winbackUsers">Win-Back Users (Churned)</label>
+                    <input type="number" id="winbackUsers" value="3000" oninput="calculateROI()">
+                </div>
+
+                <div class="input-group">
+                    <label for="ltv">Average LTV per User ($)</label>
+                    <input type="number" id="ltv" value="800" oninput="calculateROI()">
+                </div>
+
+                <div class="input-group">
+                    <label for="transactionLift">Transaction Volume Lift from Cashback (%)</label>
+                    <input type="number" id="transactionLift" value="20" oninput="calculateROI()">
+                </div>
+
+                <div class="calc-result" id="result">
+                    <div class="calc-result-value">Loading...</div>
+                    <div>Return on Investment</div>
+                </div>
+
+                <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 8px;">
+                    <h4 style="color: #1E3A8A; margin-bottom: 15px;">Detailed Breakdown</h4>
+                    <div id="breakdown"></div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Scenario Modeling</h3>
+
+            <div class="campaign-grid">
+                <div class="campaign-card" onclick="loadScenario('conservative')">
+                    <div class="campaign-title">Conservative Scenario</div>
+                    <ul style="margin-top: 15px; line-height: 2;">
+                        <li>5,000 referral users</li>
+                        <li>6,800 activated users (50% of target)</li>
+                        <li>1,500 win-backs</li>
+                        <li>+10% transaction lift</li>
+                    </ul>
+                    <p><strong>Result:</strong> ~$9M LTV, 4,000% ROI</p>
+                    <button style="margin-top: 15px; width: 100%;">Load Scenario</button>
+                </div>
+
+                <div class="campaign-card" style="border-color: #00D4AA; border-width: 3px;" onclick="loadScenario('baseline')">
+                    <div class="campaign-title" style="color: #00D4AA;">Baseline Scenario (Our Plan) ⭐</div>
+                    <ul style="margin-top: 15px; line-height: 2;">
+                        <li>10,000 referral users</li>
+                        <li>13,680 activated users</li>
+                        <li>3,000 win-backs</li>
+                        <li>+20% transaction lift</li>
+                    </ul>
+                    <p><strong>Result:</strong> ~$22M LTV, 10,000% ROI</p>
+                    <button style="margin-top: 15px; width: 100%;">Load Scenario</button>
+                </div>
+
+                <div class="campaign-card" onclick="loadScenario('optimistic')">
+                    <div class="campaign-title">Optimistic Scenario</div>
+                    <ul style="margin-top: 15px; line-height: 2;">
+                        <li>15,000 referral users</li>
+                        <li>18,000 activated users</li>
+                        <li>5,000 win-backs</li>
+                        <li>+30% transaction lift</li>
+                    </ul>
+                    <p><strong>Result:</strong> ~$31M LTV, 14,000% ROI</p>
+                    <button style="margin-top: 15px; width: 100%;">Load Scenario</button>
+                </div>
+            </div>
+
+            <div class="insight-box success" style="margin-top: 30px;">
+                <strong>Even if Everything Goes Wrong:</strong>
+                Conservative scenario (50% of targets achieved): $9M LTV on $219K investment = <strong>4,000% ROI</strong>
+                <br><br>This strategy has massive upside with limited downside.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab Switching
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.tab');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+
+            if (tabName === 'calculator') {
+                calculateROI();
+            }
+        }
+
+        // ROI Calculator
+        function calculateROI() {
+            const budget = parseFloat(document.getElementById('budget').value) || 219000;
+            const newUsers = parseFloat(document.getElementById('newUsers').value) || 10000;
+            const activatedUsers = parseFloat(document.getElementById('activatedUsers').value) || 13680;
+            const winbackUsers = parseFloat(document.getElementById('winbackUsers').value) || 3000;
+            const ltv = parseFloat(document.getElementById('ltv').value) || 800;
+            const transactionLift = parseFloat(document.getElementById('transactionLift').value) || 20;
+
+            // Calculate returns
+            const newUserValue = newUsers * ltv;
+            const activatedValue = activatedUsers * ltv;
+            const winbackValue = winbackUsers * ltv;
+
+            // Transaction lift value (simplified)
+            const transactionValue = (transactionLift / 100) * 50000 * 120 * 6 / 12; // 50K users, $120 avg revenue, 6 months
+
+            const totalValue = newUserValue + activatedValue + winbackValue + transactionValue;
+            const roi = ((totalValue - budget) / budget * 100).toFixed(0);
+
+            // Display result
+            document.getElementById('result').innerHTML = `
+                <div class="calc-result-value">${roi}%</div>
+                <div>Return on Investment</div>
+            `;
+
+            // Display breakdown
+            document.getElementById('breakdown').innerHTML = `
+                <table style="width: 100%;">
+                    <tr>
+                        <td><strong>New User LTV (Referrals)</strong></td>
+                        <td style="text-align: right;"><strong>$${newUserValue.toLocaleString()}</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Activated User LTV (Education)</strong></td>
+                        <td style="text-align: right;"><strong>$${activatedValue.toLocaleString()}</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Win-Back User LTV</strong></td>
+                        <td style="text-align: right;"><strong>$${winbackValue.toLocaleString()}</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transaction Lift Value</strong></td>
+                        <td style="text-align: right;"><strong>$${transactionValue.toLocaleString()}</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>Total Value Generated</strong></td>
+                        <td style="text-align: right;"><strong style="color: #065f46;">$${totalValue.toLocaleString()}</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Marketing Investment</strong></td>
+                        <td style="text-align: right;"><strong style="color: #ef4444;">-$${budget.toLocaleString()}</strong></td>
+                    </tr>
+                    <tr style="background: #1E3A8A; color: white;">
+                        <td><strong>Net Profit</strong></td>
+                        <td style="text-align: right;"><strong style="color: #00D4AA; font-size: 1.3em;">$${(totalValue - budget).toLocaleString()}</strong></td>
+                    </tr>
+                </table>
+            `;
+        }
+
+        // Load Predefined Scenarios
+        function loadScenario(scenario) {
+            if (scenario === 'conservative') {
+                document.getElementById('budget').value = 219000;
+                document.getElementById('newUsers').value = 5000;
+                document.getElementById('activatedUsers').value = 6800;
+                document.getElementById('winbackUsers').value = 1500;
+                document.getElementById('ltv').value = 800;
+                document.getElementById('transactionLift').value = 10;
+            } else if (scenario === 'baseline') {
+                document.getElementById('budget').value = 219000;
+                document.getElementById('newUsers').value = 10000;
+                document.getElementById('activatedUsers').value = 13680;
+                document.getElementById('winbackUsers').value = 3000;
+                document.getElementById('ltv').value = 800;
+                document.getElementById('transactionLift').value = 20;
+            } else if (scenario === 'optimistic') {
+                document.getElementById('budget').value = 219000;
+                document.getElementById('newUsers').value = 15000;
+                document.getElementById('activatedUsers').value = 18000;
+                document.getElementById('winbackUsers').value = 5000;
+                document.getElementById('ltv').value = 800;
+                document.getElementById('transactionLift').value = 30;
+            }
+            calculateROI();
+        }
+
+        // Initialize on page load
+        window.addEventListener('load', function() {
+            calculateROI();
+        });
+
+        // Animate progress bars on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fills = entry.target.querySelectorAll('.progress-fill');
+                    fills.forEach(fill => {
+                        const width = fill.style.width;
+                        fill.style.width = '0%';
+                        setTimeout(() => {
+                            fill.style.width = width;
+                        }, 100);
+                    });
+                }
+            });
+        });
+
+        document.querySelectorAll('.metrics-dashboard').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

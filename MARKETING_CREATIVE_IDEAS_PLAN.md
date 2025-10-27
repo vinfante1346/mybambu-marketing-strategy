@@ -377,6 +377,228 @@ No tiene precio."
 
 ---
 
+### **CAMPAIGN 5: "Recompensas MyBambu" (NEW! - Based on Loyalty Survey)** 🆕
+**Launch**: Month 2-3 (after operations fixed)
+**Duration**: Ongoing loyalty program
+**Goal**: Retain high-value customers, drive transaction volume
+
+#### **Big Idea**:
+Tiered cashback and rewards program that pays customers for using MyBambu. 70% of Emerald/Diamond customers demand cashback - without this, we lose them to Chime/Dave.
+
+#### **Visual Theme**:
+- Three-tier structure: 🟢 Jade → 💚 Emerald → 💎 Diamond
+- Premium feel (gold/platinum gradients)
+- Progress tracking: "You're 3 transactions away from Emerald!"
+- Gamified tier advancement
+
+#### **Tier Structure**:
+
+**Tier 1: Jade** (All Users)
+- 0.5% cashback on debit purchases
+- Earn points on all transactions
+- Redeem for cashback or gift cards
+
+**Tier 2: Emerald** ($500/mo direct deposit)
+- 1% cashback on ALL purchases
+- 2 free international transfers/month
+- Priority support (12-hour SLA)
+- Birthday bonus ($10)
+
+**Tier 3: Diamond** ($2,000/mo direct deposit)
+- 1.5% cashback on ALL purchases
+- UNLIMITED free international transfers
+- VIP support (1-hour SLA)
+- Dedicated account manager
+- Annual iPhone raffle
+
+#### **Launch Email Sequence**:
+
+**Launch Day - Announcement**: "💰 Anuncio GRANDE: Cashback Llegó a MyBambu"
+```
+Subject: 💰 {{FirstName}}, ahora ganás con cada compra. Sí, EN SERIO.
+
+Hola {{FirstName}},
+
+Tengo noticias que te van a encantar...
+
+A partir de HOY, cada vez que usas tu tarjeta MyBambu,
+ganás dinero de regreso. CASHBACK. 💸
+
+━━━━━━━━━━━━━━━━━━━━━━━
+Tu nivel actual: 💚 EMERALD
+Tu cashback: 1% en TODAS tus compras
+━━━━━━━━━━━━━━━━━━━━━━━
+
+¿Qué significa esto para ti?
+
+Ejemplo real:
+$500 en gasolina → $5 de regreso
+$200 en supermercado → $2 de regreso
+$100 en restaurantes → $1 de regreso
+
+= $8 GRATIS este mes
+= $96 GRATIS este año
+
+PLUS para nivel Emerald:
+✓ 2 transferencias internacionales GRATIS/mes
+✓ Prioridad en soporte (respondemos en 12 horas)
+✓ $10 regalo en tu cumpleaños
+
+¿Cómo activar?
+YA ESTÁ ACTIVADO. Sólo usa tu tarjeta. 💳
+
+[Ver Mi Cashback]
+
+Con cariño,
+Ana & el equipo MyBambu 🌴
+
+PD: Mientras más usas, más ganas. ¿Simple, no?
+```
+
+**Creative Elements**:
+- Animated GIF showing cash flying into wallet
+- Calculator tool: "¿Cuánto puedo ganar?" (input monthly spend)
+- Tier badge visual (like airline status)
+- Social proof: "10,482 users ganaron $87K en cashback este mes"
+
+---
+
+**Week 1 - Education**: "Cómo Maximizar Tu Cashback"
+```
+Subject: {{FirstName}}, aquí están los trucos para ganar MÁS 💡
+
+Hola {{FirstName}},
+
+Ahora que tienes cashback activo, déjame enseñarte
+cómo MAXIMIZAR tus ganancias:
+
+🎯 TRUCO #1: Usa MyBambu para TODO
+- Gasolina, supermercado, facturas, Netflix...
+- Ejemplo: Carlos gasta $1,200/mes = $12/mes cashback = $144/año
+
+🎯 TRUCO #2: Sube de nivel
+- Emerald (1%) → Diamond (1.5%)
+- Diferencia: $6/año → $18/año en $1,200 gastos
+
+🎯 TRUCO #3: Transfiere con cashback
+- Nivel Diamond = transferencias internacionales GRATIS
+- Ahorras $120/año (si envías $500/mes)
+
+CASO REAL:
+María, nivel Diamond:
+- Cashback: $15/mes
+- Transfers gratis: $10/mes
+- TOTAL: $25/mes = $300/año
+
+[Calcular Mi Cashback Potencial]
+
+-Ana
+```
+
+---
+
+**Month 1 - Tier Upgrade Nudge**: "🏆 Estás cerca de Emerald!"
+```
+Subject: {{FirstName}}, 2 más y subes de nivel. ¡Vamos!
+
+Progreso a Emerald:
+███████░░░ 70%
+
+Necesitas:
+✓ $500/mo depósito directo
+   (Actualmente: $350) ← ¡Casi ahí!
+
+Cuando llegues a Emerald:
+🎁 1% cashback (desde 0.5%)
+🎁 2 transfers gratis/mes
+🎁 Soporte prioritario
+🎁 $10 en tu cumpleaños
+
+¿Cómo subir?
+→ Configura tu depósito directo completo
+→ O deposita el resto manual ($150)
+
+[Subir a Emerald]
+
+Te vemos en la cima,
+-Ana
+```
+
+---
+
+#### **Segmentation Strategy**:
+
+**Spanish Speakers** (79% of loyalty customers):
+- Emphasize: Transfer fee relief + cashback
+- Messaging: "Envía dinero gratis + gana cashback"
+- Why: Remittance behavior (send money home regularly)
+
+**English Speakers** (21%):
+- Emphasize: Cashback percentage + gift cards
+- Messaging: "Earn 1.5% on every purchase"
+- Why: Transactional focus, less remittances
+
+**Age 45+**:
+- Emphasize: VIP service + dedicated account manager
+- Messaging: "White-glove service for our most valued customers"
+- Why: Value personal attention, higher LTV
+
+---
+
+#### **In-App Experience**:
+
+**Dashboard Widget**:
+```
+┌────────────────────────────┐
+│ 💰 Tu Cashback Este Mes    │
+├────────────────────────────┤
+│ Ganado:  $12.47           │
+│ Nivel:   💚 Emerald        │
+│ Próximo: 💎 Diamond        │
+│                            │
+│ Progress: ████████░░ 80%   │
+│ $400 más para Diamond      │
+│                            │
+│ [Ver Detalles]             │
+└────────────────────────────┘
+```
+
+**Transaction Notifications**:
+```
+✅ Compra aprobada: Shell Gas $45.00
+💰 Cashback ganado: $0.45 (1%)
+
+Balance: $523.47 (+$0.45)
+```
+
+---
+
+#### **Competitive Positioning**:
+
+**Before Recompensas**:
+- MyBambu: No cashback ❌
+- Chime: 1% cashback ✅
+- Dave: 1% cashback ✅
+- → We're losing high-value customers
+
+**After Recompensas**:
+- MyBambu: 0.5-1.5% tiered + FREE transfers + VIP service ✅
+- Chime: 1% flat, limited transfers
+- Dave: 1% flat, no transfers
+- → BEST VALUE for Latino families
+
+---
+
+#### **Expected Results**:
+- Transaction volume: +20% (customers spend more for cashback)
+- Emerald/Diamond churn: 4.2% → 2.1% (50% reduction)
+- PPC-30 (top tier): 2.1 → 2.9
+- Cost: $50K/year cashback
+- Interchange revenue: $180K/year
+- Net positive: +$130K (program pays for itself!)
+
+---
+
 ## 📱 SOCIAL MEDIA STRATEGY
 
 ### **Platform Priorities**:
@@ -890,27 +1112,103 @@ No questions asked. Solo queremos otra oportunidad.
 
 ---
 
-## 💰 BUDGET BREAKDOWN (6 Months)
+## 💰 BUDGET BREAKDOWN (6 Months) - UPDATED WITH COMPREHENSIVE DATA
 
-| Category | Month 1-2 | Month 3-4 | Month 5-6 | Total |
-|----------|-----------|-----------|-----------|-------|
-| **Content Creation** | $2K | $3K | $3K | $8K |
-| **Influencer Partnerships** | $3K | $5K | $5K | $13K |
-| **User Bonuses** | $10K | $15K | $20K | $45K |
-| **Events (Pop-ups)** | $0 | $8K | $16K | $24K |
-| **Ambassador Program** | $0 | $3K | $3K | $6K |
-| **Social Media Ads** | $2K | $5K | $8K | $15K |
-| **Email/SMS Tools** | $500 | $500 | $500 | $1.5K |
-| **Merchandise** | $1K | $2K | $2K | $5K |
-| **Contingency** | $1.5K | $2.5K | $2.5K | $6.5K |
-| **TOTAL** | **$20K** | **$44K** | **$60K** | **$124K** |
+### **Total Investment: $219K** (Marketing + Operations)
 
-**ROI Calculation**:
-- $124K marketing spend
-- Expected: 10,000 new activated users (PPC ≥ 2)
-- LTV per user: $800
-- Total LTV: $8M
-- ROI: 6,350%
+**3-Phase Approach Based on 8 Months of Survey Data:**
+
+#### **PHASE 1: Fix Foundation** ($54K - Month 1) 🔴 URGENT
+
+| Category | Amount | Rationale |
+|----------|--------|-----------|
+| **Operational Fixes** | $30K | Fix Rewards Queue crisis (39% satisfaction) |
+| - Bonus automation system | $15K | Eliminate 7+ day delays |
+| - 2 additional support agents | $10K | Improve response times (69% → 80%) |
+| - Ticketing/triage system | $5K | Urgent vs non-urgent routing |
+| **Content Production** | $12K | Education content (76% activation with education) |
+| - 100 FAQ articles (ES+EN) | $6K | Close knowledge gap (20% don't understand) |
+| - 15 video tutorials | $6K | Show, don't tell |
+| **Historias Reales Launch** | $12K | No operational dependencies |
+| - 5 micro-influencers | $10K | Build trust (87% trust family/friends) |
+| - Customer story videos | $2K | Real testimonials |
+| **PHASE 1 TOTAL** | **$54K** | **Unblock campaigns** |
+
+#### **PHASE 2: Launch Gamification + Cashback** ($120K - Months 2-3) 🟡 CRITICAL
+
+| Category | Amount | Rationale |
+|----------|--------|-----------|
+| **Tu Primera Semana** | $45K | Gamified onboarding ($43/user × 1,000 users) |
+| - Funding bonuses ($3) | $15K | Increase 24% → 45% funding rate |
+| - Card activation ($5) | $10K | Drive product adoption |
+| - Direct deposit ($25) | $18K | Critical for engagement |
+| - Completion bonus ($10) | $2K | 70% target completion |
+| **Recompensas MyBambu** | $50K | NEW! Based on loyalty survey (70% want cashback) |
+| - Cashback program budget | $30K | 0.5-1.5% tiered cashback |
+| - Engineering/product build | $15K | Tier system + tracking UI |
+| - Launch marketing | $5K | Announcement campaign |
+| **Referidos = Familia** | $25K | Viral growth (k=1.4 target) |
+| - Referral bonuses | $20K | $20-35 per referral × 500 referrals |
+| - WhatsApp share mechanics | $3K | Viral mechanics development |
+| - Fraud detection | $2K | Device fingerprinting |
+| **PHASE 2 TOTAL** | **$120K** | **Drive PPC-30 1.2 → 1.6** |
+
+#### **PHASE 3: Scale + Win-Back** ($74K - Months 4-6) 🟢 GROWTH
+
+| Category | Amount | Rationale |
+|----------|--------|-----------|
+| **Win-Back Campaign** | $35K | 56% of churned customers would return |
+| - Email/SMS to 30K churned | $5K | Segment by churn reason |
+| - Reactivation offers ($10) | $30K | 3,000 reactivations × $10 |
+| **Community Events** | $24K | In-person trust building |
+| - TX events (Houston, Dallas) | $10K | 28% of users in Texas |
+| - FL events (Miami) | $8K | 14% of users in Florida |
+| - CA events (LA) | $6K | 13% of users in California |
+| **Expand Influencers** | $15K | Scale from 5 → 15 influencers |
+| - 10 new micro-influencers | $12K | Community authenticity |
+| - Production support | $3K | Content creation costs |
+| **PHASE 3 TOTAL** | **$74K** | **PPC-30 → 2.0+, Reduce churn** |
+
+---
+
+### **GRAND TOTAL: $219,000**
+
+**Cost Breakdown by Type:**
+- Operational Fixes: $30K (14%)
+- User Bonuses/Rewards: $100K (46%) - Goes directly to customers
+- Cashback Program: $30K (14%)
+- Content/Influencers: $29K (13%)
+- Events: $24K (11%)
+- Tech/Tools: $6K (3%)
+
+**Key Insight**: 60% ($130K) goes directly to customers vs. ad platforms
+
+---
+
+### **ROI Calculation - UPDATED**:
+
+| Metric | Value | Calculation |
+|--------|-------|-------------|
+| **Total Investment** | $219K | Marketing + Operations |
+| **New Users (Referrals)** | 10,000 | Viral coefficient k=1.4 |
+| **Activated Users (Education)** | 13,680 | 76% activation rate (proven in survey) |
+| **Win-Back Users** | 3,000 | 56% of churned × reactivation rate |
+| **Avg LTV per User** | $800 | Existing metric |
+| **Total LTV Generated** | **$22.34M** | (10K + 13.68K + 3K) × $800 |
+| **ROI** | **10,100%** | ($22.34M - $219K) / $219K |
+
+**Conservative Scenario** (50% of targets):
+- LTV: $11.17M
+- ROI: 5,000%
+- Still exceptional
+
+**Key Findings from 8 Months of Survey Data:**
+- 17,000+ responses across 9 surveys
+- CSAT declining (3.62 → 3.41) - Operations crisis
+- Rewards Queue at 39% satisfaction (BLOCKS campaigns)
+- 70% of top-tier customers demand cashback
+- 76% activation rate achievable with education
+- 56% of churned customers would return
 
 ---
 
