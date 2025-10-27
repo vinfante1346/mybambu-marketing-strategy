@@ -211,6 +211,52 @@ Tactical guide including:
 
 ---
 
+### 8. **Sprint_0_Execution_Checklist.md**
+**10-day sprint checklist** for rapid foundation launch
+
+**What's Inside:**
+- Pre-Sprint 0 Requirements (executive buy-in, budget, resources)
+- Day-by-day tasks (10 business days / 2 weeks)
+- Week 1: Foundation & Planning
+  - Day 1: Executive decision & kickoff
+  - Day 2: Design & wireframes
+  - Day 3: User research & analytics setup
+  - Day 4: Content creation & engineering kick-off
+  - Day 5: Week 1 review & demos
+- Week 2: Build & Launch
+  - Day 6-7: Engineering sprints
+  - Day 8: Testing & QA
+  - Day 9: Soft launch
+  - Day 10: Full launch & retrospective
+- Team formation (Onboarding, Engagement, Data, Marketing squads)
+- Daily standup templates
+- Go/no-go criteria
+
+**Best For:** Fast-track launches, sprint planning, agile teams
+
+**Note:** Alternative to 30-day plan if you need faster execution (10 days vs 30 days)
+
+---
+
+### 9. **PRESENTATION_SPEAKER_NOTES.md**
+**Detailed speaker notes** for presenting marketing strategy
+
+**What's Inside:**
+- Presentation tips (delivery style, body language, tech setup)
+- Slide-by-slide speaker notes (60-minute presentation)
+- What to say (verbatim scripts for each slide)
+- Timing guidance (how long to spend on each section)
+- Transition phrases between slides
+- Handling Q&A (common questions + answers)
+- Presentation flow optimization
+- Confidence builders
+
+**Best For:** Executives presenting to board, CMO pitching to investors, team presentations
+
+**Note:** Pairs with MARKETING_PRESENTATION_DECK.md for complete presentation package
+
+---
+
 ## 🎯 Quick Start Guide
 
 **If you have 5 minutes:** Open `MyBambu_Interactive_Presentation_v2.html` → Read Crisis Analysis tab
@@ -221,9 +267,16 @@ Tactical guide including:
 
 **If you're implementing:**
 1. Read `COMPREHENSIVE_SURVEY_ANALYSIS.md` for strategy
-2. Follow `30_DAY_ENGAGEMENT_PLAN.md` for daily execution
+2. **Choose your execution path:**
+   - **30-Day Path:** Follow `30_DAY_ENGAGEMENT_PLAN.md` (recommended for crisis response)
+   - **10-Day Sprint:** Follow `Sprint_0_Execution_Checklist.md` (for fast execution)
 3. Use `30_Day_Engagement_Journey.md` for email/SMS copy
 4. Review 3-phase roadmap in v2 presentation
+
+**If you're presenting:**
+1. Review `MARKETING_PRESENTATION_DECK.md` for slide structure
+2. Use `PRESENTATION_SPEAKER_NOTES.md` for delivery guidance
+3. Open `MyBambu_Interactive_Presentation_v2.html` for live demos
 
 ---
 
