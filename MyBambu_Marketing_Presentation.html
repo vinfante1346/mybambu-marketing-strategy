@@ -25,41 +25,29 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: var(--midnight-blue);
             color: var(--white);
-            overflow: hidden;
-            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
         .presentation-container {
             width: 100%;
-            height: 100vh;
-            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         /* Slide Styles */
         .slide {
-            display: none;
             width: 100%;
-            height: 100%;
-            padding: 60px 80px;
-            animation: fadeIn 0.5s ease-in-out;
-            overflow-y: auto;
-        }
-
-        .slide.active {
+            min-height: 100vh;
+            padding: 80px 80px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border-bottom: 1px solid rgba(39, 251, 107, 0.1);
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .slide:last-child {
+            border-bottom: none;
         }
 
         /* Title Slide */
@@ -214,51 +202,34 @@
             font-weight: 600;
         }
 
-        /* Navigation */
-        .nav-container {
+        /* Scroll to Top Button */
+        .scroll-to-top {
             position: fixed;
             bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
-            z-index: 1000;
-            background: rgba(0, 5, 46, 0.95);
-            padding: 15px 30px;
-            border-radius: 50px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(39, 251, 107, 0.3);
-        }
-
-        .nav-btn {
+            right: 30px;
             background: var(--green-primary);
             color: var(--midnight-blue);
             border: none;
-            padding: 12px 24px;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: 600;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
             cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(39, 251, 107, 0.3);
             transition: all 0.3s ease;
         }
 
-        .nav-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(39, 251, 107, 0.4);
+        .scroll-to-top:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(39, 251, 107, 0.5);
         }
 
-        .nav-btn:disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-
-        .slide-counter {
-            color: var(--white);
-            font-size: 16px;
+        .scroll-to-top.visible {
             display: flex;
-            align-items: center;
-            padding: 0 20px;
-            font-weight: 500;
         }
 
         /* Progress Bar */
@@ -348,14 +319,12 @@
                 grid-template-columns: 1fr;
             }
 
-            .nav-container {
-                bottom: 15px;
-                padding: 10px 20px;
-            }
-
-            .nav-btn {
-                padding: 10px 16px;
-                font-size: 14px;
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
             }
         }
 
@@ -383,7 +352,7 @@
 
     <div class="presentation-container">
         <!-- Slide 1: Title -->
-        <div class="slide active title-slide">
+        <div class="slide title-slide">
             <h1>MyBambu Marketing Strategy</h1>
             <div class="subtitle">Building Financial Freedom for 10M Latino Families</div>
             <p style="margin-top: 40px; font-size: 20px; opacity: 0.9;">Based on 17,000+ customer survey responses</p>
@@ -951,57 +920,44 @@
         </div>
     </div>
 
-    <!-- Navigation Controls -->
-    <div class="nav-container">
-        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
-        <span class="slide-counter" id="slideCounter">1 / 24</span>
-        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
-    </div>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
 
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-
-        function showSlide(n) {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (n + totalSlides) % totalSlides;
-            slides[currentSlide].classList.add('active');
-            updateCounter();
-            updateProgress();
-            updateButtons();
+        // Update progress bar based on scroll position
+        function updateProgressBar() {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
         }
 
-        function changeSlide(n) {
-            showSlide(currentSlide + n);
+        // Show/hide scroll to top button
+        function toggleScrollButton() {
+            const scrollBtn = document.getElementById('scrollToTopBtn');
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
         }
 
-        function updateCounter() {
-            document.getElementById('slideCounter').textContent = `${currentSlide + 1} / ${totalSlides}`;
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
-        function updateProgress() {
-            const progress = ((currentSlide + 1) / totalSlides) * 100;
-            document.getElementById('progressBar').style.width = progress + '%';
-        }
-
-        function updateButtons() {
-            document.getElementById('prevBtn').disabled = (currentSlide === 0);
-            document.getElementById('nextBtn').disabled = (currentSlide === totalSlides - 1);
-        }
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'ArrowLeft') changeSlide(-1);
-            if (event.key === 'ArrowRight') changeSlide(1);
-            if (event.key === 'Home') showSlide(0);
-            if (event.key === 'End') showSlide(totalSlides - 1);
+        // Listen to scroll events
+        window.addEventListener('scroll', function() {
+            updateProgressBar();
+            toggleScrollButton();
         });
 
         // Initialize
-        updateCounter();
-        updateProgress();
-        updateButtons();
+        updateProgressBar();
+        toggleScrollButton();
     </script>
 </body>
 </html>
