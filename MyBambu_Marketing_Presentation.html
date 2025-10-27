@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBambu Marketing Strategy Presentation</title>
+    <style>
+        /* Official MyBambu Brand Colors from Brand Guidelines 2025 */
+        :root {
+            --green-primary: #27FB6B;
+            --blue-black: #00052E;
+            --midnight-blue: #000312;
+            --white: #FFFFFF;
+            --blue-secondary: #002041;
+            --tropical-turquoise: #01CFFB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--midnight-blue);
+            color: var(--white);
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Slide Styles */
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 60px 80px;
+            animation: fadeIn 0.5s ease-in-out;
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Title Slide */
+        .title-slide {
+            background: linear-gradient(135deg, var(--green-primary) 0%, var(--blue-secondary) 100%);
+            text-align: center;
+        }
+
+        .title-slide h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title-slide .subtitle {
+            font-size: 28px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        /* Standard Slide */
+        .slide h2 {
+            font-size: 48px;
+            margin-bottom: 40px;
+            color: var(--green-primary);
+        }
+
+        .slide h3 {
+            font-size: 32px;
+            margin-bottom: 24px;
+            margin-top: 32px;
+        }
+
+        .slide p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Split Screen Layout */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .split-layout .column {
+            padding: 20px;
+        }
+
+        /* Stat Boxes */
+        .stat-box {
+            background: var(--blue-black);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--green-primary);
+            margin-bottom: 20px;
+        }
+
+        .stat-box .number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--green-primary);
+            margin-bottom: 8px;
+        }
+
+        .stat-box .label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Grid Layout */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--blue-black);
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 3px solid var(--green-primary);
+        }
+
+        .card h4 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--green-primary);
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Badge Styles */
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .badge-new {
+            background: var(--green-primary);
+            color: var(--midnight-blue);
+        }
+
+        .badge-launched {
+            background: var(--tropical-turquoise);
+            color: var(--midnight-blue);
+        }
+
+        .badge-planned {
+            background: #666;
+            color: var(--white);
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--blue-black);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background: var(--green-primary);
+            color: var(--midnight-blue);
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+            background: rgba(0, 5, 46, 0.95);
+            padding: 15px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(39, 251, 107, 0.3);
+        }
+
+        .nav-btn {
+            background: var(--green-primary);
+            color: var(--midnight-blue);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(39, 251, 107, 0.4);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            color: var(--white);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-weight: 500;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--green-primary);
+            transition: width 0.3s ease;
+            z-index: 1001;
+            box-shadow: 0 0 10px rgba(39, 251, 107, 0.5);
+        }
+
+        /* List Styles */
+        ul {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(39, 251, 107, 0.2), rgba(1, 207, 251, 0.2));
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--green-primary);
+            margin: 30px 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--green-primary);
+            margin-top: 0;
+        }
+
+        /* Metric Cards */
+        .metric-card {
+            background: linear-gradient(135deg, var(--blue-black), var(--blue-secondary));
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--green-primary);
+        }
+
+        .metric-card .metric-value {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--green-primary);
+            margin-bottom: 8px;
+        }
+
+        .metric-card .metric-label {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .metric-card .metric-change {
+            font-size: 14px;
+            color: var(--tropical-turquoise);
+            margin-top: 8px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 40px 30px;
+            }
+
+            .slide h1 {
+                font-size: 36px;
+            }
+
+            .slide h2 {
+                font-size: 32px;
+            }
+
+            .split-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .grid-3, .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                bottom: 15px;
+                padding: 10px 20px;
+            }
+
+            .nav-btn {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+        }
+
+        /* Section Divider */
+        .section-slide {
+            background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--blue-black) 100%);
+            text-align: center;
+            justify-content: center;
+        }
+
+        .section-slide h2 {
+            font-size: 56px;
+            color: var(--green-primary);
+            margin-bottom: 20px;
+        }
+
+        .section-slide p {
+            font-size: 24px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <div class="presentation-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active title-slide">
+            <h1>MyBambu Marketing Strategy</h1>
+            <div class="subtitle">Building Financial Freedom for 10M Latino Families</div>
+            <p style="margin-top: 40px; font-size: 20px; opacity: 0.9;">Based on 17,000+ customer survey responses</p>
+        </div>
+
+        <!-- Slide 2: The Challenge -->
+        <div class="slide">
+            <h2>The Challenge</h2>
+            <div class="split-layout">
+                <div class="column">
+                    <h3 style="color: #F59E0B;">Where We Are</h3>
+                    <div class="stat-box">
+                        <div class="number">1.1</div>
+                        <div class="label">Products Per Customer</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">68%</div>
+                        <div class="label">7-Day Retention</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">24%</div>
+                        <div class="label">Fund Within 24 Hours</div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 style="color: var(--green-primary);">Where We Need to Be</h3>
+                    <div class="stat-box">
+                        <div class="number">2.0+</div>
+                        <div class="label">Products Per Customer</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">82%</div>
+                        <div class="label">7-Day Retention</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">45%</div>
+                        <div class="label">Fund Within 24 Hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Crisis Alert -->
+        <div class="slide">
+            <h2 style="color: #F59E0B;">🚨 Crisis Alert</h2>
+            <div class="highlight-box" style="border-color: #F59E0B;">
+                <h3 style="color: #F59E0B; font-size: 48px;">CSAT Declining</h3>
+                <p style="font-size: 32px; margin: 20px 0;">
+                    <span style="color: #F59E0B;">3.62 → 3.41</span>
+                </p>
+                <p style="font-size: 20px;">
+                    Customer satisfaction dropped 6% in 8 months
+                </p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Top Complaint</h4>
+                    <p style="font-size: 24px; color: var(--green-primary);">39%</p>
+                    <p>"Rewards Queue - Where's my money?"</p>
+                </div>
+                <div class="card">
+                    <h4>Support Backlog</h4>
+                    <p style="font-size: 24px; color: var(--green-primary);">3-5 days</p>
+                    <p>Response time (should be <24 hours)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Root Cause -->
+        <div class="slide">
+            <h2>Root Cause: The Rewards Queue Crisis</h2>
+            <div class="highlight-box" style="border-color: #F59E0B;">
+                <h3 style="color: #F59E0B;">Only 39% satisfaction with rewards program</h3>
+                <p style="font-size: 22px;">Users completing onboarding tasks but NOT receiving promised bonuses</p>
+            </div>
+            <h3>Why This Happens</h3>
+            <ul>
+                <li>Manual bonus approval process (2-5 day delay)</li>
+                <li>Unclear task completion criteria</li>
+                <li>No transparency on "where's my bonus?"</li>
+                <li>Support team overwhelmed with bonus inquiries</li>
+            </ul>
+            <div class="highlight-box">
+                <p style="font-size: 22px; font-weight: 600;">✓ Fix: Automate bonus delivery & add progress tracker (Phase 1)</p>
+            </div>
+        </div>
+
+        <!-- Slide 5: Survey Foundation -->
+        <div class="slide">
+            <h2>Survey Data Foundation</h2>
+            <p style="font-size: 22px; margin-bottom: 40px;">8 months of data | 17,000+ responses</p>
+            <div class="grid-3">
+                <div class="metric-card">
+                    <div class="metric-value">76%</div>
+                    <div class="metric-label">Need education to activate Direct Deposit</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">68%</div>
+                    <div class="metric-label">Would refer friends for $20</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">82%</div>
+                    <div class="metric-label">Prefer Spanish content</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">70%</div>
+                    <div class="metric-label">Want cashback rewards (top tier)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">92%</div>
+                    <div class="metric-label">Trust user stories over ads</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">87%</div>
+                    <div class="metric-label">Trust family recommendations</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: 3-Phase Approach -->
+        <div class="slide">
+            <h2>3-Phase Approach</h2>
+            <p style="font-size: 22px; margin-bottom: 30px;">Fix Foundation → Launch Campaigns → Scale Growth</p>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="badge badge-launched">Month 1</span>
+                    <h4>Phase 1: Fix Foundation</h4>
+                    <p style="font-size: 18px; margin: 15px 0;">$54K</p>
+                    <ul style="font-size: 16px; margin-left: 20px;">
+                        <li>Automate bonus system</li>
+                        <li>Hire support agents</li>
+                        <li>Launch education content</li>
+                        <li>Real user stories</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="badge badge-planned">Months 2-3</span>
+                    <h4>Phase 2: Launch Gamification</h4>
+                    <p style="font-size: 18px; margin: 15px 0;">$120K</p>
+                    <ul style="font-size: 16px; margin-left: 20px;">
+                        <li>Tu Primera Semana bonuses</li>
+                        <li>Cashback rewards</li>
+                        <li>Referral program</li>
+                        <li>Viral mechanics</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="badge badge-planned">Months 4-6</span>
+                    <h4>Phase 3: Scale + Win-Back</h4>
+                    <p style="font-size: 18px; margin: 15px 0;">$74K</p>
+                    <ul style="font-size: 16px; margin-left: 20px;">
+                        <li>Win-back churned users</li>
+                        <li>Community events</li>
+                        <li>Expand influencers</li>
+                        <li>VIP tier benefits</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 40px;">
+                <p style="font-size: 22px; font-weight: 600;">Total 6-Month Budget: $219K (Marketing + Operations)</p>
+            </div>
+        </div>
+
+        <!-- Slide 7: 5 Campaign Pillars -->
+        <div class="slide section-slide">
+            <h2>5 Campaign Pillars</h2>
+            <p>Data-driven marketing campaigns based on survey insights</p>
+        </div>
+
+        <!-- Slide 8: Pillars Overview -->
+        <div class="slide">
+            <h2>The 5 Pillars</h2>
+            <div class="grid-2" style="margin-top: 40px;">
+                <div class="card">
+                    <span class="badge badge-planned">Campaign 1</span>
+                    <h4>Tu Primera Semana</h4>
+                    <p>7-day onboarding journey with gamified bonuses</p>
+                    <p style="color: var(--green-primary); margin-top: 10px;">Goal: 1.1 → 1.8 PPC-7</p>
+                </div>
+                <div class="card">
+                    <span class="badge badge-planned">Campaign 2</span>
+                    <h4>Referidos = Familia</h4>
+                    <p>Viral referral program leveraging trust networks</p>
+                    <p style="color: var(--green-primary); margin-top: 10px;">Goal: 7,450 new users</p>
+                </div>
+                <div class="card">
+                    <span class="badge badge-planned">Campaign 3</span>
+                    <h4>Historias Reales</h4>
+                    <p>User-generated content & authentic testimonials</p>
+                    <p style="color: var(--green-primary); margin-top: 10px;">Goal: +28% trust score</p>
+                </div>
+                <div class="card">
+                    <span class="badge badge-planned">Campaign 4</span>
+                    <h4>Educación Financiera</h4>
+                    <p>MyBambu University - Financial literacy content</p>
+                    <p style="color: var(--green-primary); margin-top: 10px;">Goal: 2.3× activation rate</p>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 30px;">
+                <span class="badge badge-new">NEW - Campaign 5</span>
+                <h4>Recompensas MyBambu</h4>
+                <p>3-tier cashback program (0.5% - 1.5%) addressing #1 request from loyalty survey</p>
+                <p style="color: var(--green-primary); margin-top: 10px;">Goal: 50% churn reduction in top tier</p>
+            </div>
+        </div>
+
+        <!-- Slide 9: Campaign 1 Title -->
+        <div class="slide section-slide">
+            <h2>Campaign 1</h2>
+            <h3 style="font-size: 48px; color: var(--white);">Tu Primera Semana</h3>
+            <p>Your First Week: Gamified Onboarding Journey</p>
+        </div>
+
+        <!-- Slide 10: Tu Primera Semana Details -->
+        <div class="slide">
+            <h2>Tu Primera Semana: 7-Day Journey</h2>
+            <p style="font-size: 20px; margin-bottom: 30px;">Gamified onboarding with $43 in total bonuses</p>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>🎁 Day 1: Fund $10+</h4>
+                    <p style="font-size: 28px; color: var(--green-primary);">$3 Bonus</p>
+                    <p>Welcome bonus for first deposit</p>
+                </div>
+                <div class="card">
+                    <h4>💳 Day 3: Activate Card</h4>
+                    <p style="font-size: 28px; color: var(--green-primary);">$5 Bonus</p>
+                    <p>First transaction with debit card</p>
+                </div>
+                <div class="card">
+                    <h4>💰 Day 5: Set Up Direct Deposit</h4>
+                    <p style="font-size: 28px; color: var(--green-primary);">$25 Bonus</p>
+                    <p>Highest value action unlocked</p>
+                </div>
+                <div class="card">
+                    <h4>🎯 Day 7: Complete All Tasks</h4>
+                    <p style="font-size: 28px; color: var(--green-primary);">$10 Bonus</p>
+                    <p>Celebration bonus for power users</p>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 30px;">
+                <h3>Expected Results</h3>
+                <p>7-Day PPC: 1.1 → 1.8 | Funding Rate: 24% → 45% | Retention: 68% → 82%</p>
+            </div>
+        </div>
+
+        <!-- Slide 11: Campaign 2 -->
+        <div class="slide section-slide">
+            <h2>Campaign 2</h2>
+            <h3 style="font-size: 48px; color: var(--white);">Referidos = Familia</h3>
+            <p>You're Not Selling. You're Helping Your People.</p>
+        </div>
+
+        <!-- Slide 12: Referral Program -->
+        <div class="slide">
+            <h2>Referidos = Familia</h2>
+            <div class="highlight-box">
+                <h3>The Insight</h3>
+                <p style="font-size: 32px; font-weight: 700;">87%</p>
+                <p style="font-size: 20px;">of Latinos trust family & friends over advertising</p>
+            </div>
+            <h3>4-Tier Referral Program</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>💪 Ayudante (1-2 referrals)</h4>
+                    <p style="font-size: 24px; color: var(--green-primary);">$20/friend</p>
+                </div>
+                <div class="card">
+                    <h4>🌟 Líder (3-5 referrals)</h4>
+                    <p style="font-size: 24px; color: var(--green-primary);">$25/friend + T-shirt</p>
+                </div>
+                <div class="card">
+                    <h4>👑 Campeón (6-10 referrals)</h4>
+                    <p style="font-size: 24px; color: var(--green-primary);">$30/friend + $100 bonus</p>
+                </div>
+                <div class="card">
+                    <h4>🏆 Leyenda (11+ referrals)</h4>
+                    <p style="font-size: 24px; color: var(--green-primary);">$35/friend + iPhone</p>
+                </div>
+            </div>
+            <p style="margin-top: 30px; font-size: 20px;">Expected: 7,450 new users via referrals | Viral Coefficient: 1.4</p>
+        </div>
+
+        <!-- Slide 13: Campaign 3 -->
+        <div class="slide section-slide">
+            <h2>Campaign 3</h2>
+            <h3 style="font-size: 48px; color: var(--white);">Historias Reales</h3>
+            <p>Real People. Real Results. Real Trust.</p>
+        </div>
+
+        <!-- Slide 14: User Stories -->
+        <div class="slide">
+            <h2>Historias Reales</h2>
+            <div class="highlight-box">
+                <h3>The Insight</h3>
+                <p style="font-size: 32px; font-weight: 700;">92%</p>
+                <p style="font-size: 20px;">of consumers trust user-generated content over traditional advertising</p>
+            </div>
+            <h3>Multi-Channel Distribution</h3>
+            <ul style="font-size: 20px;">
+                <li>📧 Email: Monthly "Cliente del Mes" spotlight</li>
+                <li>📱 Instagram: Photo + quote carousel posts</li>
+                <li>🎥 YouTube: 60-second testimonial videos</li>
+                <li>📲 TikTok/Reels: 15-second customer stories</li>
+                <li>💬 In-app: Featured stories on home screen</li>
+                <li>🌐 Website: Dedicated testimonials page</li>
+            </ul>
+            <div class="highlight-box" style="margin-top: 30px;">
+                <h3>Expected Impact</h3>
+                <p>Trust Score: +28% | Signup Conversion: +15% | Organic Search Traffic: +45%</p>
+            </div>
+        </div>
+
+        <!-- Slide 15: Campaign 4 -->
+        <div class="slide section-slide">
+            <h2>Campaign 4</h2>
+            <h3 style="font-size: 48px; color: var(--white);">MyBambu University</h3>
+            <p>Educación Financiera Para Todos 🎓</p>
+        </div>
+
+        <!-- Slide 16: Education Program -->
+        <div class="slide">
+            <h2>MyBambu University</h2>
+            <div class="highlight-box">
+                <h3>The Problem</h3>
+                <p style="font-size: 20px;">#1 reason Latinos don't use multiple banking products: <br><strong>"No entiendo cómo funcionan."</strong> (76% from funding survey)</p>
+            </div>
+            <h3>3 Core Modules</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>🏦 Construir Crédito</h4>
+                    <p>5-minute video on credit scores & credit building</p>
+                </div>
+                <div class="card">
+                    <h4>💰 Ahorrar Para Emergencias</h4>
+                    <p>4-week email series on emergency fund basics</p>
+                </div>
+                <div class="card">
+                    <h4>🌎 Enviar Dinero</h4>
+                    <p>Blog + infographic on fee-free remittances</p>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 30px;">
+                <p style="font-size: 20px;"><strong>Impact:</strong> Users who watch education content are <strong style="color: var(--green-primary);">2.3× more likely</strong> to activate additional products</p>
+            </div>
+        </div>
+
+        <!-- Slide 17: Campaign 5 -->
+        <div class="slide section-slide">
+            <h2>Campaign 5 - NEW!</h2>
+            <h3 style="font-size: 48px; color: var(--white);">Recompensas MyBambu</h3>
+            <p>Because Your Loyalty Deserves Rewards 💎</p>
+        </div>
+
+        <!-- Slide 18: Cashback Program -->
+        <div class="slide">
+            <h2>Recompensas MyBambu: 3-Tier Cashback</h2>
+            <div class="highlight-box" style="border-color: #F59E0B;">
+                <p style="font-size: 32px; font-weight: 700; color: #F59E0B;">70%</p>
+                <p style="font-size: 20px;">of Emerald & Diamond customers want CASHBACK as #1 reward</p>
+                <p style="font-size: 16px; margin-top: 10px; opacity: 0.9;">Without cashback, we lose high-value customers to Chime/Dave</p>
+            </div>
+            <h3>Tier Structure</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>🟢 Jade (All Users)</h4>
+                    <p style="font-size: 24px; color: var(--green-primary);">0.5% cashback</p>
+                    <p>On all debit purchases</p>
+                </div>
+                <div class="card">
+                    <h4>💚 Emerald ($500/mo DD)</h4>
+                    <p style="font-size: 24px; color: var(--green-primary);">1% cashback</p>
+                    <p>+ 2 free transfers/month</p>
+                </div>
+                <div class="card">
+                    <h4>💎 Diamond ($2K/mo DD)</h4>
+                    <p style="font-size: 24px; color: var(--green-primary);">1.5% cashback</p>
+                    <p>+ Unlimited transfers + VIP support</p>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 30px;">
+                <h3>Expected Impact</h3>
+                <p>Churn Reduction: 4.2% → 2.1% (50%) | Transaction Volume: +20% | Cost: $50K | Revenue: $180K (Net: +$130K)</p>
+            </div>
+        </div>
+
+        <!-- Slide 19: Business Impact -->
+        <div class="slide">
+            <h2>Business Impact: PPC-30 Growth</h2>
+            <p style="font-size: 20px; margin-bottom: 30px;">3-Phase progression over 6 months</p>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Current Baseline</h4>
+                    <p style="font-size: 48px; color: #F59E0B;">1.2</p>
+                    <p>Products per customer (operations broken)</p>
+                </div>
+                <div class="card">
+                    <h4>6-Month Target</h4>
+                    <p style="font-size: 48px; color: var(--green-primary);">2.0+</p>
+                    <p>67% increase after phased approach</p>
+                </div>
+            </div>
+            <h3 style="margin-top: 40px;">Phased Progression</h3>
+            <ul style="font-size: 20px;">
+                <li><strong>M0:</strong> Baseline 1.2 (operations broken)</li>
+                <li><strong>M1:</strong> Fix ops, launch Education + Stories → 1.3</li>
+                <li><strong>M2-M3:</strong> Tu Primera Semana + Cashback → 1.6</li>
+                <li><strong>M3:</strong> Referidos = Familia → 1.8</li>
+                <li><strong>M4-M5:</strong> Win-back + VIP tier → 2.1</li>
+                <li><strong>M6:</strong> Target achieved (2.0+)</li>
+            </ul>
+        </div>
+
+        <!-- Slide 20: ROI Summary -->
+        <div class="slide">
+            <h2>ROI Summary: 6-Month Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total Investment (Marketing + Ops)</td>
+                        <td style="font-size: 24px; font-weight: 700;">$219,000</td>
+                    </tr>
+                    <tr>
+                        <td>New Users (Referrals)</td>
+                        <td style="font-size: 20px;">10,000</td>
+                    </tr>
+                    <tr>
+                        <td>Activated Users (Education)</td>
+                        <td style="font-size: 20px;">13,680</td>
+                    </tr>
+                    <tr>
+                        <td>Win-Back Users (Churned)</td>
+                        <td style="font-size: 20px;">3,000</td>
+                    </tr>
+                    <tr>
+                        <td>Average LTV per User</td>
+                        <td style="font-size: 20px;">$800</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top: 2px solid var(--green-primary);"><strong>Total LTV Generated</strong></td>
+                        <td style="font-size: 28px; font-weight: 700; color: var(--green-primary); border-top: 2px solid var(--green-primary);">$22,340,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ROI</strong></td>
+                        <td style="font-size: 32px; font-weight: 700; color: var(--green-primary);">10,100%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="highlight-box" style="margin-top: 30px;">
+                <p style="font-size: 24px; font-weight: 600;">Every $1 spent = $102 in lifetime value</p>
+                <p style="font-size: 18px; margin-top: 10px;">Conservative scenario (50% of targets): $11M LTV | 5,000% ROI</p>
+            </div>
+        </div>
+
+        <!-- Slide 21: Budget Allocation -->
+        <div class="slide">
+            <h2>6-Month Budget: $219K</h2>
+            <div class="card" style="margin-bottom: 30px;">
+                <h4>📍 Phase 1: Fix Foundation ($54K - Month 1)</h4>
+                <ul style="margin-top: 15px; font-size: 18px;">
+                    <li>🔴 Operational Fixes: $30K (bonus automation, support agents)</li>
+                    <li>🟢 Content Production: $12K (100 FAQ articles, 15 videos)</li>
+                    <li>🟣 Historias Reales: $12K (5 micro-influencers, customer stories)</li>
+                </ul>
+            </div>
+            <div class="card" style="margin-bottom: 30px;">
+                <h4>🚀 Phase 2: Launch Gamification + Cashback ($120K - Months 2-3)</h4>
+                <ul style="margin-top: 15px; font-size: 18px;">
+                    <li>🟢 Tu Primera Semana: $45K (1,000 users × $43 bonuses)</li>
+                    <li>💰 Recompensas MyBambu: $50K (cashback program + engineering)</li>
+                    <li>🟡 Referidos = Familia: $25K (referral bonuses + viral mechanics)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>📈 Phase 3: Scale + Win-Back ($74K - Months 4-6)</h4>
+                <ul style="margin-top: 15px; font-size: 18px;">
+                    <li>🔄 Win-Back Campaign: $35K ($10 offer to 30K churned customers)</li>
+                    <li>🔵 Community Events: $24K (TX, FL, CA meetups)</li>
+                    <li>🟣 Expand Influencers: $15K (10 → 15 influencers)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 22: Timeline -->
+        <div class="slide">
+            <h2>6-Month Execution Timeline</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Month 1: Foundation</h4>
+                    <ul style="font-size: 16px; margin-top: 10px;">
+                        <li>Tu Primera Semana launch</li>
+                        <li>Social media daily posts</li>
+                        <li>Influencer outreach (10)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Month 2: Scale</h4>
+                    <ul style="font-size: 16px; margin-top: 10px;">
+                        <li>Referral program launch</li>
+                        <li>Bonos Locos week</li>
+                        <li>Ambassador recruitment (50)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Month 3: Educate</h4>
+                    <ul style="font-size: 16px; margin-top: 10px;">
+                        <li>MyBambu University launch</li>
+                        <li>Savings challenge</li>
+                        <li>Historias Reales series</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Months 4-6: Events & Optimize</h4>
+                    <ul style="font-size: 16px; margin-top: 10px;">
+                        <li>Pop-up events (5 cities)</li>
+                        <li>A/B test optimizations</li>
+                        <li>Scale winning campaigns</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 30px;">
+                <p style="font-size: 20px;"><strong>Key Principle:</strong> Fix operations FIRST, then scale marketing campaigns</p>
+            </div>
+        </div>
+
+        <!-- Slide 23: Next Steps -->
+        <div class="slide">
+            <h2>Next Steps</h2>
+            <h3>Immediate Actions (This Week):</h3>
+            <ul style="font-size: 20px; margin-bottom: 30px;">
+                <li>☐ Approve budget: $219K</li>
+                <li>☐ Hire 1 content writer (Spanish-speaking)</li>
+                <li>☐ Set up SendGrid + Twilio accounts</li>
+                <li>☐ Design email templates</li>
+                <li>☐ Write first week of email copy</li>
+            </ul>
+            <h3>Month 1 Actions:</h3>
+            <ul style="font-size: 20px;">
+                <li>☐ Launch "Tu Primera Semana" campaign</li>
+                <li>☐ Post daily on Instagram (5 posts/week)</li>
+                <li>☐ Reach out to 10 micro-influencers</li>
+                <li>☐ Launch referral program</li>
+                <li>☐ Set up automated bonus system</li>
+            </ul>
+            <div class="highlight-box" style="margin-top: 40px;">
+                <p style="font-size: 24px; font-weight: 600;">Key Decision Needed: Go/No-Go by [DATE]</p>
+            </div>
+        </div>
+
+        <!-- Slide 24: Thank You -->
+        <div class="slide title-slide">
+            <h1 style="font-size: 56px; margin-bottom: 40px;">Questions?</h1>
+            <p style="font-size: 24px; margin-bottom: 60px;">Let's build the bank our community deserves 🌴💪</p>
+            <div class="highlight-box" style="background: rgba(0,0,0,0.3); max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 20px; margin-bottom: 10px;"><strong>Contact:</strong></p>
+                <p style="font-size: 18px;">CMO: [Email]</p>
+                <p style="font-size: 18px;">Slack: #marketing-team</p>
+            </div>
+            <p style="margin-top: 60px; font-size: 16px; opacity: 0.7;">MyBambu - Tu cuenta para todo</p>
+        </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="nav-container">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <span class="slide-counter" id="slideCounter">1 / 24</span>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            updateCounter();
+            updateProgress();
+            updateButtons();
+        }
+
+        function changeSlide(n) {
+            showSlide(currentSlide + n);
+        }
+
+        function updateCounter() {
+            document.getElementById('slideCounter').textContent = `${currentSlide + 1} / ${totalSlides}`;
+        }
+
+        function updateProgress() {
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = (currentSlide === 0);
+            document.getElementById('nextBtn').disabled = (currentSlide === totalSlides - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowLeft') changeSlide(-1);
+            if (event.key === 'ArrowRight') changeSlide(1);
+            if (event.key === 'Home') showSlide(0);
+            if (event.key === 'End') showSlide(totalSlides - 1);
+        });
+
+        // Initialize
+        updateCounter();
+        updateProgress();
+        updateButtons();
+    </script>
+</body>
+</html>
